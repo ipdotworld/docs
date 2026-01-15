@@ -1,68 +1,100 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "ip.world",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#AD74FE",
+    "light": "#FE74EC",
+    "dark": "#7C3AED"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "User Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Start here",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "user-guides/what-is-ipworld",
+              "user-guides/ips-and-tokens",
+              "user-guides/getting-started",
+              "user-guides/app-tour"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Account & profile",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "user-guides/account/login-and-wallets",
+              "user-guides/account/settings-and-profile",
+              "user-guides/account/connecting-socials"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Explore",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "user-guides/explore/navigating-ips",
+              "user-guides/explore/navigating-tokens",
+              "user-guides/explore/search-and-filters"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Create",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "user-guides/create/creating-an-ip",
+              "user-guides/create/creating-a-token",
+              "user-guides/create/metadata-socials-and-antisnipe"
+            ]
+          },
+          {
+            "group": "Verification & claiming",
+            "pages": [
+              "user-guides/verification/verification-overview",
+              "user-guides/verification/creator-vs-community-ips",
+              "user-guides/verification/getting-verified",
+              "user-guides/verification/claiming-a-creator-ip",
+              "user-guides/verification/ip-token-license-itl"
+            ]
+          },
+          {
+            "group": "Manage",
+            "pages": [
+              "user-guides/manage/creator-ip-management",
+              "user-guides/manage/community-ip-governance",
+              "user-guides/manage/endorsements"
+            ]
+          },
+          {
+            "group": "Growth",
+            "pages": [
+              "user-guides/growth/referrals"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "user-guides/reference/faq",
+              "user-guides/reference/glossary"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Dev Docs",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Overview",
             "pages": [
-              "api-reference/introduction"
+              "dev/index"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Platform",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "dev/authentication",
+              "dev/api",
+              "dev/webhooks"
             ]
           }
         ]
@@ -71,14 +103,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Open App",
+          "href": "https://ip.world",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Discord",
+          "href": "http://discord.gg/ipworld",
+          "icon": "discord"
         }
       ]
     }
@@ -90,33 +122,33 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "X",
+        "href": "https://x.com/ipdotworld"
+      },
+      {
+        "label": "Discord",
+        "href": "http://discord.gg/ipworld"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "App",
+      "href": "https://ip.world"
     }
   },
   "contextual": {
     "options": [
      "copy",
      "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
      "cursor",
      "vscode"
    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/ipdowtworld",
+      "discord": "http://discord.gg/ipworld",
+      "github": "https://github.com/ipdotworld"
     }
   }
 }
