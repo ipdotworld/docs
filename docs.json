@@ -36,7 +36,9 @@
             "pages": [
               "user-guides/explore/navigating-ips",
               "user-guides/explore/navigating-tokens",
-              "user-guides/explore/search-and-filters"
+              "user-guides/explore/search-and-filters",
+              "user-guides/explore/feeds",
+              "user-guides/explore/virality-score"
             ]
           },
           {
@@ -68,6 +70,8 @@
           {
             "group": "Growth",
             "pages": [
+              "user-guides/rewards/rewards-and-points",
+              "user-guides/rewards/leaderboard",
               "user-guides/growth/referrals"
             ]
           },
@@ -75,7 +79,8 @@
             "group": "Reference",
             "pages": [
               "user-guides/reference/faq",
-              "user-guides/reference/glossary"
+              "user-guides/reference/glossary",
+              "user-guides/reference/reporting-and-moderation"
             ]
           }
         ]
@@ -100,36 +105,14 @@
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Open App",
-          "href": "https://ip.world",
-          "icon": "globe"
-        },
-        {
-          "anchor": "Discord",
-          "href": "http://discord.gg/ipworld",
-          "icon": "discord"
-        }
-      ]
-    }
+    "global": {}
   },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "X",
-        "href": "https://x.com/ipdotworld"
-      },
-      {
-        "label": "Discord",
-        "href": "http://discord.gg/ipworld"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "App",
@@ -144,11 +127,5 @@
      "vscode"
    ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/ipdowtworld",
-      "discord": "http://discord.gg/ipworld",
-      "github": "https://github.com/ipdotworld"
-    }
-  }
+  "footer": {}
 }
