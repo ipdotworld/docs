@@ -43,3 +43,15 @@ A Story "IP Account" address used during claiming/registration flows (advanced c
 
 For community IP governance, the app uses the **first token created under the IP** as the canonical token for token-holder gating.
 
+## Quorum / pass conditions (governance)
+
+When the app decides whether a governance proposal passed:
+
+- **YES must be greater than NO**
+- **YES must be at least a baseline plus an opposition-adjusted threshold**
+
+The rule is:
+
+- **REQUIRED_YES = B + k × NO**
+- **B = 10%**
+- **k = 1**
