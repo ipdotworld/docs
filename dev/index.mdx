@@ -1,19 +1,33 @@
 ---
-title: "Dev docs"
-description: "Developer documentation structure (content coming soon)"
+title: "Developer documentation"
+description: "How to authenticate to ip.world backends and which first-party API routes the web app uses."
+last_verified: "2026-04-22"
 ---
 
-## Status
+## Audience
 
-These pages are currently a **scaffold** so we can iterate quickly as the product and APIs stabilize.
+- **Integrators** building bots or internal tools that reuse the **Next.js BFF** routes under `https://ip.world/api/*`.
+- **Backend engineers** extending the Go API hosted at `NEXT_PUBLIC_API_BASE_URL` (for example `https://dev-api.ip.world/api/v1` in tests).
 
-<Info>
-  If you're trying to build today, start with the User Guides for the product model: IPs, tokens, verification, and governance.
-</Info>
+This documentation **does not** expose private admin dashboards or internal-only operator APIs.
 
 ## Sections
 
-- [Authentication](/dev/authentication)
-- [API](/dev/api)
-- [Webhooks](/dev/webhooks)
+<CardGroup cols={2}>
+  <Card title="Authentication" icon="key" href="/dev/authentication">
+    Dynamic JWT via `X-Authorization` headers.
+  </Card>
+  <Card title="API routes" icon="webhook" href="/dev/api">
+    Curated list of `ip.world` `/api` routes the client calls.
+  </Card>
+  <Card title="Webhooks" icon="bolt" href="/dev/webhooks">
+    Scope of webhook integrations (mostly internal).
+  </Card>
+</CardGroup>
 
+## Source of truth
+
+Implementation lives in the monorepo:
+
+- Web app: `ip.world/app/api/**/route.ts`
+- Shared fetchers: `ip.world/lib/client/fetcher.ts`

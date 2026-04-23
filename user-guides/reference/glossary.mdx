@@ -1,57 +1,78 @@
 ---
 title: "Glossary"
-description: "Definitions for the ip.world ecosystem"
+description: "Definitions for trends, tokens, rewards, and governance on ip.world."
+last_verified: "2026-04-22"
 ---
 
-## IP
+## Trend
 
-The umbrella identity page (meme/creator/brand/trend). Tokens can be created under an IP.
+User-facing name for the **umbrella page** that represents a meme, creator, brand, or movement. Multiple **tokens** can exist under one trend. (Engineering and older UI may still say **IP**.)
 
 ## Token
 
-A market/remix created under an IP.
+A **single tradable market** launched under a trend. Sometimes labeled **Remix** in UI or code.
 
 ## Remix
 
-In the app UI/code, tokens are often referred to as "remixes" under an IP.
+Legacy label for **token** in parts of the app—same object.
 
-## Creator IP
+## Creator trend
 
-An IP type tied to a clear owner. Can be claimed by the owner after approval.
+Owner-led umbrella. Token launch optional at create time. Verified through **owner claim** flows.
 
-## Community IP
+## Community trend
 
-An IP type coordinated by token holders. Launching a token is required.
+Holder-coordinated umbrella. Token launch **required** at create time. Verified through **milestones**.
 
-## Endorsement
+## Verification
 
-A signal from a verified IP owner applied to a token (Official / Liked / Flagged).
-
-## Anti-snipe
-
-A launch option that limits wallet concentration immediately after token creation.
+Process that upgrades an umbrella from unverified to verified so economics and governance can safely attach.
 
 ## ITL (IP Token License)
 
-The license framework used by `ip.world` for verified IP ownership.
+Legal framework binding **verified** umbrellas—read the PDF linked from [IP Token License (ITL)](/user-guides/verification/ip-token-license-itl).
 
 ## IPA (IP Account)
 
-A Story "IP Account" address used during claiming/registration flows (advanced claim path).
+Story **IP Account** address used in advanced claim paths.
+
+## Endorsement
+
+Signal from a verified **creator trend owner** on a token (**Official**, **Liked**, **Flagged**).
+
+## Anti-snipe
+
+Launch option limiting early wallet concentration—see [Metadata, socials, and anti-snipe](/user-guides/launch/metadata-socials-and-antisnipe).
 
 ## Canonical voting token
 
-For community IP governance, the app uses the **first token created under the IP** as the canonical token for token-holder gating.
+For **community** governance, the **first token** created under the umbrella gates proposal/vote eligibility.
 
-## Quorum / pass conditions (governance)
+## Governance pass rule
 
-When the app decides whether a governance proposal passed:
+- **YES > NO**
+- **YES ≥ REQUIRED_YES** with **REQUIRED_YES = 0.10 + 1 × NO** (10% baseline + opposition scaling)
 
-- **YES must be greater than NO**
-- **YES must be at least a baseline plus an opposition-adjusted threshold**
+## Points
 
-The rule is:
+App-layer ledger for quests, referrals (partial), trading seasons, etc.—see [Points and leaderboard](/user-guides/rewards/points-and-leaderboard).
 
-- **REQUIRED_YES = B + k × NO**
-- **B = 10%**
-- **k = 1**
+## Referral link
+
+`https://ip.world?ref=YOURCODE` — see [Referral program](/user-guides/rewards/referrals).
+
+## UGC
+
+Social posting programs that route fee share to creators—see [UGC program](/user-guides/rewards/ugc-program).
+
+## Holder rewards
+
+Windowed payouts to scored holders—see [Holder rewards](/user-guides/rewards/holder-rewards).
+
+## Relay
+
+Cross-chain liquidity movement (e.g., Story **IP** to Solana **SOL**) via Relay quotes—see [Payment methods](/user-guides/trading/payment-methods).
+
+## Embedded wallet
+
+MPC wallet from Dynamic—Story EVM identity + Solana funding wallet; see [Embedded wallets](/user-guides/account/embedded-wallets).

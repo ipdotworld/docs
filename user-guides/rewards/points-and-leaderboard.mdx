@@ -1,0 +1,39 @@
+---
+title: "Points and leaderboard"
+description: "Quests, trading volume points, tiers, and where totals render."
+last_verified: "2026-04-22"
+---
+
+## Onboarding quests
+
+Completing one-time tasks (link X, TikTok, username, first trade, first trend, first token, etc.) grants **10 points** each per the backend reward catalog—duplicate completions are blocked in application logic.
+
+## Trading volume (season)
+
+Trading points use **cumulative season volume** multiplied by a **single bracket multiplier** (not progressive marginal bands). Current implementation (see `base/docs/REWARDS_AND_REFERRAL_SYSTEM.md`):
+
+| Season volume (USD) | Multiplier |
+| --- | ---: |
+| ≤ 1,000 | 0.05 |
+| ≤ 5,000 | 0.10 |
+| ≤ 10,000 | 0.15 |
+| ≤ 25,000 | 0.20 |
+| ≤ 100,000 | 0.30 |
+| > 100,000 | 0.30 |
+
+Season start parameter in engineering docs: **`2025-07-28T00:00:00Z`** — confirm the Leaderboard still references the same season in UI copy.
+
+## Referral bonus
+
+Referrers can receive **10%** of many reward families created through the main reward service (notably **not** raw UGC-point writes, which bypass that path). Stored as `reward_type = referral_bonus`.
+
+## Leaderboard UI
+
+Rankings and totals display on the **Leaderboard** page; profile shows your slice of the action.
+
+![Leaderboard figure](/images/rewards-leaderboard.svg)
+
+## Next
+
+- [Referral program](/user-guides/rewards/referrals)
+- [Tokenomics and fees](/user-guides/rewards/tokenomics-and-fees)

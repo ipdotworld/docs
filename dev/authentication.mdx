@@ -1,13 +1,40 @@
 ---
 title: "Authentication"
-description: "How authentication works for the ip.world platform (coming soon)"
+description: "Dynamic JWTs, X-Authorization headers, and client helpers used by ip.world."
+last_verified: "2026-04-22"
 ---
 
-## Coming soon
+## Browser sessions (Dynamic)
 
-This page will cover:
+The web app uses **Dynamic** (`@dynamic-labs/sdk-react-core`) for authentication. Client utilities import `getAuthToken` from `@/lib/dynamic`, which re-exports Dynamic SDK helpers.
 
-- Wallet-based authentication for user routes
-- Domain validation and admin authentication (dashboard)
-- Token/session behavior, refresh rules, and security notes
+## Calling first-party `/api` routes
 
+Authenticated fetches use the **`X-Authorization`** header (note: **not** `Authorization`):
+
+```http
+GET /api/users/current HTTP/1.1
+Host: ip.world
+X-Authorization: Bearer <dynamic_jwt>
+```
+
+The shared helper `fetchJSONWithAuth` in `lib/client/fetcher.ts` sets:
+
+```ts
+headers: { "X-Authorization": `Bearer ${getAuthToken()}` }
+```
+
+## Server-to-backend calls
+
+`lib/server/fetcher.ts` copies the user token into outbound requests to `NEXT_PUBLIC_API_BASE_URL` using the same header name pattern for backend routes that expect the Dynamic JWT.
+
+## curl example
+
+```bash
+curl -sS 'https://ip.world/api/users/current' \
+  -H "X-Authorization: Bearer $DYNAMIC_JWT"
+```
+
+## Next
+
+- [API routes](/dev/api)

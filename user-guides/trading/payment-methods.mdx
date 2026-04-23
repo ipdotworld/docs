@@ -1,0 +1,32 @@
+---
+title: "Payment methods"
+description: "IP, USDC on Story, and Solana SOL/USDC via Relay — as wired in config/relay-chains.ts and trade."
+last_verified: "2026-04-22"
+---
+
+## Story-native
+
+- **IP** — native Story gas and pay asset.
+- **USDC (Story)** — ERC-20 on Story at `STORY_USDC_ADDRESS` in `config/relay-chains.ts`.
+
+## Solana via Relay
+
+Relay supports Solana funding routes using Relay’s Solana chain id **`792703809`** (`RELAY_SOLANA_CHAIN_ID`):
+
+- **SOL** — `SOLANA_NATIVE_SOL_ADDRESS` (`11111111111111111111111111111111`).
+- **USDC** — SPL mint `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`.
+
+Your **Solana embedded wallet** receives bridged funds when withdrawing Story IP to SOL via `relayStoryIpToSolana`.
+
+## Chains
+
+- **Story mainnet chain id** — **`1514`** (`RELAY_STORY_CHAIN_ID`).
+
+## What is not implied
+
+Other EVM chains may appear in curated Relay chain lists for future or partial support—**only document pay assets that the trade UI actually exposes** in your build.
+
+## Next
+
+- [Trade modes and switches](/user-guides/trading/trade-modes-and-switches)
+- [Embedded wallets](/user-guides/account/embedded-wallets)

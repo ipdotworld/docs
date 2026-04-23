@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0d0d0d"/>
+  <rect x="40" y="40" width="1200" height="640" rx="14" fill="#121212" stroke="#313131" stroke-width="2"/>
+  <text x="640" y="200" text-anchor="middle" fill="#ad74fe" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28" font-weight="600">ip.world docs</text>
+  <text id="label" x="640" y="280" text-anchor="middle" fill="#d9d9d9" font-family="ui-monospace,monospace" font-size="18">trade-panel</text>
+  <text x="640" y="340" text-anchor="middle" fill="#797979" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14">Branded documentation figure — replace with product screenshot when available.</text>
+</svg>

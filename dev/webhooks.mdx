@@ -1,13 +1,25 @@
 ---
 title: "Webhooks"
-description: "Webhook structure (coming soon)"
+description: "Inbound webhook integrations for ip.world."
+last_verified: "2026-04-22"
 ---
 
-## Coming soon
+## Public developer webhooks
 
-This page will cover:
+There is **no** stable, documented third-party webhook surface exposed from the `ip.world` Next.js app for general integrators as of this writing.
 
-- Webhook event types
-- Signing / verification
-- Delivery semantics and retries
+## Internal systems
 
+Background workers in the **Go API** (`base`) may consume provider webhooks (payments, social providers, etc.). Those endpoints live on private infrastructure and require operator credentials.
+
+## If you need an integration
+
+Contact the ip.world team via [Discord](https://discord.gg/ipworld) with:
+
+- the event you want (deposits, trades, verification),
+- your signing secret rotation plan,
+- expected payload schema.
+
+## Next
+
+- [Authentication](/dev/authentication)

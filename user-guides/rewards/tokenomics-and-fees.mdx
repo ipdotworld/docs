@@ -1,0 +1,29 @@
+---
+title: "Tokenomics and fees"
+description: "High-level map of trading fees, pools, graduation, and who gets paid."
+last_verified: "2026-04-22"
+---
+
+## Why this page exists
+
+Traders care **why** price moves; builders care **where** fees route. This page stays qualitative; deep formulas live in engineering references.
+
+## Engineering references (advanced)
+
+- `dashboard/docs/FEE_FORMULAS.md` — LP splits, holder scoring, UGC scoring.
+- `base/docs/REWARD_SYSTEM_TECHNICAL.md` — indexer tables, UGC vs holder pool wiring.
+
+## Graduation
+
+Tokens **graduate** from bonding curves into richer liquidity configurations; the **exact market cap target** is **config / UI specific**. Read the **Graduation** meter on the token page rather than third-party summaries.
+
+## Who gets paid (conceptual)
+
+- **Traders** pay swap fees like any DEX market.
+- **Pools** split portions toward **holders**, **UGC creators**, **treasury / community**, and **verified owners** depending on token type and verification state.
+- **Points** are an **app-layer** ledger for quests and seasons—do not conflate them with on-chain fee splits.
+
+## Next
+
+- [Rewards overview](/user-guides/rewards/overview)
+- [After verification](/user-guides/verification/after-verification)

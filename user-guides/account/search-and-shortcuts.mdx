@@ -1,0 +1,23 @@
+---
+title: "Search and shortcuts"
+description: "Global search entry points and keyboard shortcuts as implemented in the web app."
+last_verified: "2026-04-22"
+---
+
+## Opening search
+
+Use the search affordance in the app chrome (magnifying glass). The dialog is implemented in `components/search-dialog.tsx` and queries `/api/users/search` for user suggestions alongside token/trend discovery depending on build.
+
+## Keyboard shortcut
+
+The search input shows the shortcut hint in-product (commonly **⌘K** / **Ctrl+K** style). Follow the hint printed in your build—do not hardcode a different shortcut in support macros without checking.
+
+## What you can find
+
+- **Users** by query string (server-backed search),
+- **Tokens and trends** per current Explore wiring.
+
+## Next
+
+- [Navigating tokens](/user-guides/explore/navigating-tokens)
+- [Explore filters](/user-guides/explore/search-filters-and-sort)

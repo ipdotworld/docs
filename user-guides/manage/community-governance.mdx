@@ -1,0 +1,49 @@
+---
+title: "Community governance"
+description: "Token-holder proposals, canonical voting tokens, and pass thresholds."
+last_verified: "2026-04-22"
+---
+
+## Model
+
+**Community trends** are coordinated by token holders.
+
+Governance is built around:
+
+- a **canonical voting token** (the **first token** created for that umbrella),
+- **Snapshot** proposals and voting surfaced in the ip.world UI.
+
+## Access control
+
+Creating proposals or voting may require holding the **canonical voting token** in the wallet you connected for governance actions.
+
+## What you can do
+
+- **Vote** — For / Against / Abstain.
+- **Create proposals** — when eligible.
+- **Treasury moves** — spending proposals that pull vested rewards or route funds per approved text.
+
+![Treasury proposals figure](/images/token-treasury.svg)
+
+## Pass rule
+
+Plain English: proposals need **more YES than NO** *and* YES must clear an opposition-aware threshold.
+
+Formal rule:
+
+- **YES > NO**
+- **YES ≥ REQUIRED_YES**
+- **REQUIRED_YES = B + k × NO** with **B = 10%** and **k = 1**
+
+<Tip>
+  Controversial proposals (large NO) require disproportionately large YES to pass—by design.
+</Tip>
+
+## Shielded voting
+
+If Snapshot is configured for shielded voting, the UI may note that you will not see your explicit choice echoed in-app.
+
+## Next
+
+- [Treasury and proposals](/user-guides/manage/treasury-and-proposals)
+- [After verification](/user-guides/verification/after-verification)

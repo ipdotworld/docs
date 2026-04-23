@@ -1,0 +1,29 @@
+name: Mintlify docs
+
+on:
+  push:
+    paths:
+      - "**.mdx"
+      - "**.json"
+      - ".github/workflows/mintlify-validate.yml"
+  pull_request:
+    paths:
+      - "**.mdx"
+      - "**.json"
+      - ".github/workflows/mintlify-validate.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate Mintlify
+        run: npx --yes mintlify@latest validate
+      - name: Check broken links
+        run: npx --yes mintlify@latest broken-links

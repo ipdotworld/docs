@@ -1,0 +1,20 @@
+old_path,new_path,page_title,nav_group,tab
+,user-guides/trends-and-tokens,Trends and tokens,Start here,User guide
+,user-guides/platform-map,Platform map,Start here,User guide
+,user-guides/ips-and-tokens,user-guides/trends-and-tokens,Trends and tokens,Start here,User guide
+,user-guides/app-tour,user-guides/platform-map,Platform map,Start here,User guide
+,user-guides/account/login-and-wallets,user-guides/account/sign-in-methods,Sign-in methods,Account and access,User guide
+,user-guides/account/connecting-socials,user-guides/account/connecting-x,Connect X,Account and access,User guide
+,user-guides/explore/navigating-ips,user-guides/explore/navigating-trends,Navigating trends,Discover,User guide
+,user-guides/explore/feeds,user-guides/explore/social-feeds,Social feeds,Discover,User guide
+,user-guides/explore/search-and-filters,user-guides/explore/search-filters-and-sort,"Search, filters, and sort",Discover,User guide
+,user-guides/explore/virality-score,user-guides/explore/virality,Virality,Discover,User guide
+,user-guides/create/creating-an-ip,user-guides/launch/create-a-trend,Create a trend,Launch,User guide
+,user-guides/create/creating-a-token,user-guides/launch/create-a-token,Launch a token,Launch,User guide
+,user-guides/create/metadata-socials-and-antisnipe,user-guides/launch/metadata-socials-and-antisnipe,"Metadata, socials, and anti-snipe",Launch,User guide
+,user-guides/verification/creator-vs-community-ips,user-guides/verification/creator-vs-community-trends,Creator vs community trends,Verification and trust,User guide
+,user-guides/verification/claiming-a-creator-ip,user-guides/verification/claiming-a-creator-trend,Claiming a creator trend,Verification and trust,User guide
+,user-guides/manage/creator-ip-management,user-guides/manage/trend-owner-dashboard,Trend owner dashboard,Owners and treasury,User guide
+,user-guides/reference/reporting-and-moderation,user-guides/safety/reporting,Reporting,Safety,User guide
+,user-guides/growth/referrals,user-guides/rewards/referrals,Referral program,Rewards and economics,User guide
+,user-guides/rewards/rewards-and-points,user-guides/rewards/points-and-leaderboard,Points and leaderboard,Rewards and economics,User guide

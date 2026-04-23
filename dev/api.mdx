@@ -1,14 +1,71 @@
 ---
-title: "API"
-description: "API reference structure (coming soon)"
+title: "API routes (web app)"
+description: "Representative Next.js route handlers under /api that the ip.world client calls."
+last_verified: "2026-04-22"
 ---
 
-## Coming soon
+## Notes
 
-This page will cover:
+- Paths are relative to the deployment host (`https://ip.world`).
+- Most routes **proxy** or enrich data from `NEXT_PUBLIC_API_BASE_URL` (`/api/v1` on the Go service).
+- **Auth**: send `X-Authorization: Bearer <jwt>` when the route uses `fetchJSONWithAuth` patterns.
 
-- Base URLs and environments
-- Core resources (IPs, tokens, users, votes, verification)
-- Error handling and rate limits
-- OpenAPI/Swagger integration
+## Users & search
 
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/users/current` | Session user profile |
+| `POST` | `/api/users` | Create/update user payloads from client actions |
+| `GET` | `/api/users/search?q=` | Search leaderboard users |
+| `GET` | `/api/users/referral` | Referral metadata |
+
+## Markets & explore
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/explore` | Explore feed payload |
+| `GET` | `/api/ips/*` | Trend (IP) CRUD, charts, feeds, takes |
+| `GET` | `/api/remixes/*` | Token (remix) feeds and search |
+| `GET` | `/api/tokens/*` | Token discovery helpers |
+| `GET` | `/api/ohlcv` | Candle data for charts |
+
+## Pricing helpers
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/prices/ip` | IP price |
+| `GET` | `/api/prices/usdc` | USDC reference |
+| `GET` | `/api/prices/sol` | SOL reference |
+
+## Governance
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/governance/proposals` | List proposals for token |
+| `POST` | `/api/governance/proposals/prepare` | Prepare proposal txs |
+| `POST` | `/api/governance/proposals/submit` | Submit proposals |
+| `POST` | `/api/governance/votes/prepare` | Prepare votes |
+| `POST` | `/api/governance/votes/submit` | Submit votes |
+| `GET` | `/api/governance/votes` | Vote receipts |
+| `POST` | `/api/governance/spaces/create` | Snapshot space bootstrap |
+
+## Social & safety
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET/POST` | `/api/comments` | Token comments |
+| `POST` | `/api/reports` | Moderation reports |
+
+## Images & misc
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/images/proxy` | Image proxy |
+| `POST` | `/api/images/generate` | Generated art helpers |
+| `GET` | `/api/proxy/*` | Generic backend proxy |
+
+This table is **not exhaustive**—grep `app/api` for the authoritative list.
+
+## Next
+
+- [Webhooks](/dev/webhooks)

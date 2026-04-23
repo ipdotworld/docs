@@ -1,0 +1,22 @@
+---
+title: "Trading overview"
+description: "Buy and sell on a token page — flow, confirmations, and where to go next."
+last_verified: "2026-04-22"
+---
+
+## Buy and sell
+
+Open **Trade** on a token page. Pick direction (**buy** / **sell**), choose the **pay asset**, enter size, then confirm in your wallet UI when prompted.
+
+The trade experience is implemented primarily in `app/(dApp)/token/[tokenAddress]/trade/trade.tsx` with mode switching in `trade-switch.tsx`.
+
+![Trade panel figure](/images/trade-panel.svg)
+
+## Slippage and errors
+
+If a transaction fails, read the revert or toast message—common issues are insufficient **IP** for gas, insufficient pay token balance, user reject, or **anti-snipe** constraints on certain launches.
+
+## Next
+
+- [Payment methods](/user-guides/trading/payment-methods)
+- [Fees, slippage, and failures](/user-guides/trading/fees-slippage-and-failures)

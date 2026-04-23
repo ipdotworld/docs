@@ -1,0 +1,24 @@
+/* ip.world-aligned accents for Mintlify (dark-first) */
+:root {
+  --ipw-bg: #0d0d0d;
+  --ipw-border: #313131;
+  --ipw-brand: #ad74fe;
+  --ipw-muted: #797979;
+}
+
+/* Mintlify exposes predictable regions — tune lightly so upgrades do not break */
+#navbar a:hover {
+  color: var(--ipw-brand) !important;
+}
+
+#sidebar a[data-active="true"] {
+  color: var(--ipw-brand) !important;
+}
+
+footer {
+  border-top: 1px solid var(--ipw-border);
+}
+
+pre {
+  border: 1px solid var(--ipw-border) !important;
+}

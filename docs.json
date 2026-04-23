@@ -2,111 +2,172 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "ip.world",
+  "description": "User and developer documentation for ip.world — trends, tokens, trading, rewards, and integrations.",
   "colors": {
     "primary": "#AD74FE",
-    "light": "#FE74EC",
-    "dark": "#7C3AED"
+    "light": "#C093FF",
+    "dark": "#321F4D"
+  },
+  "background": {
+    "decoration": "grid",
+    "color": {
+      "light": "#FFFFFF",
+      "dark": "#0D0D0D"
+    }
+  },
+  "appearance": {
+    "default": "dark"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "User Guides",
+        "tab": "User guide",
         "groups": [
           {
             "group": "Start here",
             "pages": [
               "index",
               "user-guides/what-is-ipworld",
-              "user-guides/ips-and-tokens",
+              "user-guides/trends-and-tokens",
               "user-guides/getting-started",
-              "user-guides/app-tour"
+              "user-guides/platform-map"
             ]
           },
           {
-            "group": "Account & profile",
+            "group": "Account and access",
             "pages": [
-              "user-guides/account/login-and-wallets",
+              "user-guides/account/sign-in-methods",
+              "user-guides/account/embedded-wallets",
+              "user-guides/account/profile-and-stats",
               "user-guides/account/settings-and-profile",
-              "user-guides/account/connecting-socials"
+              "user-guides/account/connecting-x",
+              "user-guides/account/connecting-tiktok",
+              "user-guides/account/search-and-shortcuts"
             ]
           },
           {
-            "group": "Explore",
+            "group": "Discover",
             "pages": [
-              "user-guides/explore/navigating-ips",
+              "user-guides/explore/navigating-trends",
               "user-guides/explore/navigating-tokens",
-              "user-guides/explore/search-and-filters",
-              "user-guides/explore/feeds",
-              "user-guides/explore/virality-score"
+              "user-guides/explore/search-filters-and-sort",
+              "user-guides/explore/social-feeds",
+              "user-guides/explore/virality"
             ]
           },
           {
-            "group": "Create",
+            "group": "Token page",
             "pages": [
-              "user-guides/create/creating-an-ip",
-              "user-guides/create/creating-a-token",
-              "user-guides/create/metadata-socials-and-antisnipe"
+              "user-guides/tokens/token-page-overview",
+              "user-guides/tokens/charts-and-metrics",
+              "user-guides/tokens/holders-and-transactions",
+              "user-guides/tokens/comments"
             ]
           },
           {
-            "group": "Verification & claiming",
+            "group": "Trading",
+            "pages": [
+              "user-guides/trading/overview",
+              "user-guides/trading/payment-methods",
+              "user-guides/trading/trade-modes-and-switches",
+              "user-guides/trading/fees-slippage-and-failures"
+            ]
+          },
+          {
+            "group": "Launch",
+            "pages": [
+              "user-guides/launch/create-a-trend",
+              "user-guides/launch/create-a-token",
+              "user-guides/launch/metadata-socials-and-antisnipe"
+            ]
+          },
+          {
+            "group": "Verification and trust",
             "pages": [
               "user-guides/verification/verification-overview",
-              "user-guides/verification/creator-vs-community-ips",
+              "user-guides/verification/creator-vs-community-trends",
+              "user-guides/verification/creator-trends",
+              "user-guides/verification/community-trends",
               "user-guides/verification/getting-verified",
-              "user-guides/verification/claiming-a-creator-ip",
-              "user-guides/verification/ip-token-license-itl"
+              "user-guides/verification/claiming-a-creator-trend",
+              "user-guides/verification/ip-token-license-itl",
+              "user-guides/verification/after-verification"
             ]
           },
           {
-            "group": "Manage",
+            "group": "Owners and treasury",
             "pages": [
-              "user-guides/manage/creator-ip-management",
-              "user-guides/manage/community-ip-governance",
+              "user-guides/manage/trend-owner-dashboard",
+              "user-guides/manage/treasury-and-proposals",
+              "user-guides/manage/community-governance",
               "user-guides/manage/endorsements"
             ]
           },
           {
-            "group": "Growth",
+            "group": "Rewards and economics",
             "pages": [
-              "user-guides/rewards/rewards-and-points",
-              "user-guides/rewards/leaderboard",
-              "user-guides/growth/referrals"
+              "user-guides/rewards/overview",
+              "user-guides/rewards/points-and-leaderboard",
+              "user-guides/rewards/referrals",
+              "user-guides/rewards/ugc-program",
+              "user-guides/rewards/holder-rewards",
+              "user-guides/rewards/tokenomics-and-fees"
+            ]
+          },
+          {
+            "group": "Safety",
+            "pages": [
+              "user-guides/safety/content-moderation",
+              "user-guides/safety/reporting"
             ]
           },
           {
             "group": "Reference",
             "pages": [
               "user-guides/reference/faq",
-              "user-guides/reference/glossary",
-              "user-guides/reference/reporting-and-moderation"
+              "user-guides/reference/glossary"
             ]
           }
         ]
       },
       {
-        "tab": "Dev Docs",
+        "tab": "Developers",
         "groups": [
           {
             "group": "Overview",
-            "pages": [
-              "dev/index"
-            ]
+            "pages": ["dev/index"]
           },
           {
             "group": "Platform",
-            "pages": [
-              "dev/authentication",
-              "dev/api",
-              "dev/webhooks"
-            ]
+            "pages": ["dev/authentication", "dev/api", "dev/webhooks"]
           }
         ]
       }
     ],
     "global": {}
   },
+  "redirects": [
+    { "source": "/user-guides/ips-and-tokens", "destination": "/user-guides/trends-and-tokens" },
+    { "source": "/user-guides/app-tour", "destination": "/user-guides/platform-map" },
+    { "source": "/user-guides/account/login-and-wallets", "destination": "/user-guides/account/sign-in-methods" },
+    { "source": "/user-guides/account/connecting-socials", "destination": "/user-guides/account/connecting-x" },
+    { "source": "/user-guides/explore/navigating-ips", "destination": "/user-guides/explore/navigating-trends" },
+    { "source": "/user-guides/explore/feeds", "destination": "/user-guides/explore/social-feeds" },
+    { "source": "/user-guides/explore/search-and-filters", "destination": "/user-guides/explore/search-filters-and-sort" },
+    { "source": "/user-guides/explore/virality-score", "destination": "/user-guides/explore/virality" },
+    { "source": "/user-guides/create/creating-an-ip", "destination": "/user-guides/launch/create-a-trend" },
+    { "source": "/user-guides/create/creating-a-token", "destination": "/user-guides/launch/create-a-token" },
+    { "source": "/user-guides/create/metadata-socials-and-antisnipe", "destination": "/user-guides/launch/metadata-socials-and-antisnipe" },
+    { "source": "/user-guides/verification/creator-vs-community-ips", "destination": "/user-guides/verification/creator-vs-community-trends" },
+    { "source": "/user-guides/verification/claiming-a-creator-ip", "destination": "/user-guides/verification/claiming-a-creator-trend" },
+    { "source": "/user-guides/manage/creator-ip-management", "destination": "/user-guides/manage/trend-owner-dashboard" },
+    { "source": "/user-guides/reference/reporting-and-moderation", "destination": "/user-guides/safety/reporting" },
+    { "source": "/user-guides/growth/referrals", "destination": "/user-guides/rewards/referrals" },
+    { "source": "/user-guides/rewards/rewards-and-points", "destination": "/user-guides/rewards/points-and-leaderboard" },
+    { "source": "/user-guides/rewards/leaderboard", "destination": "/user-guides/rewards/points-and-leaderboard" },
+    { "source": "/user-guides/manage/community-ip-governance", "destination": "/user-guides/manage/community-governance" }
+  ],
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
@@ -120,12 +181,7 @@
     }
   },
   "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "cursor",
-     "vscode"
-   ]
+    "options": ["copy", "view", "chatgpt", "claude", "perplexity"]
   },
   "footer": {}
 }

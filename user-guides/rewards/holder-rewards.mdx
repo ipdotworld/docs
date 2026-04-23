@@ -1,0 +1,22 @@
+---
+title: "Holder rewards"
+description: "Windowed payouts to long-tail holders — how to think about them on ip.world."
+last_verified: "2026-04-22"
+---
+
+## Mental model
+
+**Holder rewards** split fee pools toward wallets that **hold** the token across scoring windows. This is separate from **UGC** (creators) and **points** (leaderboard).
+
+## What the app shows
+
+Follow any **holder** panels, countdowns, or claim CTAs rendered on the token page or dashboards—those strings are closer to truth than long-form essays.
+
+## Engineering detail (optional read)
+
+`base/docs/REWARD_SYSTEM_TECHNICAL.md` documents Blockscout/Storyscan holder snapshots, tracked hold time inside the system, and a configurable **top-N** payout cap (defaults discussed around **50** wallets in engineering notes). Parameters can change—treat this file as **implementation reference**, not a promise of UI exposure.
+
+## Next
+
+- [Tokenomics and fees](/user-guides/rewards/tokenomics-and-fees)
+- [Holders tab](/user-guides/tokens/holders-and-transactions)
