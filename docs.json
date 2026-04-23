@@ -19,23 +19,16 @@
     "default": "dark"
   },
   "favicon": "/favicon.svg",
+  "icons": {
+    "library": "lucide"
+  },
   "navigation": {
     "global": {
       "anchors": [
         {
           "anchor": "FAQ",
-          "icon": "circle-question-mark",
+          "icon": "help-circle",
           "href": "/user-guides/reference/faq"
-        },
-        {
-          "anchor": "Glossary",
-          "icon": "book-open",
-          "href": "/user-guides/reference/glossary"
-        },
-        {
-          "anchor": "Account & settings",
-          "icon": "user",
-          "href": "/user-guides/account/sign-in-methods"
         },
         {
           "anchor": "Safety",
