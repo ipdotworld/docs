@@ -1,16 +1,23 @@
 ---
 title: "Trading overview"
+sidebarTitle: "Trade Coins"
 description: "Buy and sell on a token page — flow, confirmations, and where to go next."
-last_verified: "2026-04-22"
+last_verified: "2026-04-23"
 ---
 
 ## Buy and sell
 
 Open **Trade** on a token page. Pick direction (**buy** / **sell**), choose the **pay asset**, enter size, then confirm in your wallet UI when prompted.
 
+Common **pay / receive** assets include **SOL**, **USDC**, and **IP**—pick whichever the trade panel offers for that market (Relay routes may add Solana-side assets; Story-native trades center on **IP** and bridged stables).
+
 The trade experience is implemented primarily in `app/(dApp)/token/[tokenAddress]/trade/trade.tsx` with mode switching in `trade-switch.tsx`.
 
 ![Trade panel figure](/images/trade-panel.svg)
+
+## What each token page surfaces
+
+Alongside **Trade**, token pages typically expose **market cap**, **price chart**, **bonding progress** toward graduation, and **transaction history**—use those surfaces before sizing a position.
 
 ## Slippage and errors
 

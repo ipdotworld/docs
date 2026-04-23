@@ -1,24 +1,33 @@
 ---
 title: "Social feeds"
 description: "Token-level feeds for X and TikTok posts tied to a market."
-last_verified: "2026-04-22"
+last_verified: "2026-04-23"
 ---
 
 ## What feeds show
 
-On a **token** page, the **Feed** tab aggregates embedded posts (typically **X** and **TikTok**) relevant to that token and its trend.
+On a **token** page, the **Feed** tab aggregates embedded posts (typically **X** and **TikTok**) relevant to that token and its trend—this is the same content family that powers **UGC rewards** when posts meet indexing rules.
 
 ## Filters
 
-Desktop feeds commonly support:
+Desktop feeds commonly support combinations along:
 
-- **All**
-- **Twitter**
-- **TikTok**
+- **Creator type** (who posted),
+- **Platform** (**All**, **Twitter/X**, **TikTok**),
+- **Time window** (rolling ranges).
+
+Exact chips follow the live feed header.
 
 ## Sort modes
 
-Use the sort dropdown in-product (examples shipped include **Newest**, **Oldest**, **Most Featured**, **Least Featured**—verify labels in your build).
+Product messaging calls out:
+
+- **Featured** — default; prioritizes posts with strong **virality score** (traction with time decay),
+- **Newest**,
+- **My posts**,
+- **Most impressions**.
+
+Legacy builds may still show labels like **Oldest** or **Least Featured**—pick what your UI lists.
 
 ## Load more and refresh
 

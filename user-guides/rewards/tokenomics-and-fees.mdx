@@ -1,12 +1,36 @@
 ---
 title: "Tokenomics and fees"
 description: "High-level map of trading fees, pools, graduation, and who gets paid."
-last_verified: "2026-04-22"
+last_verified: "2026-04-23"
 ---
 
 ## Why this page exists
 
 Traders care **why** price moves; builders care **where** fees route. This page stays qualitative; deep formulas live in engineering references.
+
+## Fee distribution (product summary)
+
+High-level **destination** split from internal Gitbook / product copy:
+
+| Destination | Share |
+| --- | ---: |
+| Community / treasury | 45% |
+| Protocol | 25% |
+| Creators (UGC) | 15% |
+| Liquidity | 12.5% |
+| Referrals | 2.5% |
+
+Plain language:
+
+- **Community / treasury** — token-controlled funds governed by owners or holders.
+- **Creators (UGC)** — weekly-style creator payouts from trading activity (see [UGC rewards](/user-guides/rewards/ugc-program)).
+- **Liquidity** — routed to pools and market structure.
+- **Protocol** — platform operations and sustainability.
+- **Referrals** — growth incentives ([Referral program](/user-guides/rewards/referrals)).
+
+<Tip>
+  Exact routing can depend on **verification state** and **token type**—treat the table as the default mental model, not a per-tx debugger.
+</Tip>
 
 ## Engineering references (advanced)
 
@@ -16,6 +40,10 @@ Traders care **why** price moves; builders care **where** fees route. This page 
 ## Graduation
 
 Tokens **graduate** from bonding curves into richer liquidity configurations; the **exact market cap target** is **config / UI specific**. Read the **Graduation** meter on the token page rather than third-party summaries.
+
+## Bonding curve (trader view)
+
+New tokens launch on a **bonding curve**: price moves with demand, and a **bonding progress** indicator shows how far the market is from being fully bonded. Once complete, the token is **fully bonded** in the sense shown in UI.
 
 ## Who gets paid (conceptual)
 

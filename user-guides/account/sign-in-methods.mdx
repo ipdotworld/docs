@@ -1,16 +1,28 @@
 ---
 title: "Sign-in methods"
 description: "How you authenticate to ip.world — social, email, and wallets — and what it unlocks."
-last_verified: "2026-04-22"
+last_verified: "2026-04-23"
 ---
 
 ## What signing in does
 
 Signing in lets you **trade from embedded wallets**, **comment**, **govern** (when you hold voting tokens), **claim** verified trend ownership, and **earn** points tied to your profile.
 
+## Supported sign-in types
+
+Product copy groups the main paths as:
+
+- **X (Twitter)** — OAuth
+- **Google** — OAuth
+- **Email** — magic link or password (per Dynamic configuration)
+- **MetaMask** — external EVM wallet
+- **Phantom** — external Solana wallet
+
+Other wallets may appear in the same wallet list depending on Dynamic settings (for example **Rabby**).
+
 ## Order of options in the modal
 
-The Dynamic modal is configured in this order:
+The Dynamic modal is typically ordered as:
 
 1. **Social** providers (one row).
 2. **Or** separator.
@@ -18,7 +30,9 @@ The Dynamic modal is configured in this order:
 4. **Or** separator.
 5. **Wallet** list (external wallets).
 
-Recommended external wallets called out in-product include **MetaMask**, **Phantom**, and **Rabby**—use whichever you already trust.
+## Embedded wallets on first login
+
+On first successful login, the app provisions **embedded wallets** with both **Solana** and **EVM (Story)** addresses. No separate wallet install is required to start—see [Embedded wallets](/user-guides/account/embedded-wallets).
 
 ![Sign-in order overview](/images/auth-sign-in-order.svg)
 

@@ -1,7 +1,8 @@
 ---
 title: "UGC rewards"
+sidebarTitle: "UGC Rewards"
 description: "How social creators earn from token fee pools — eligibility, indexing, and payouts."
-last_verified: "2026-04-22"
+last_verified: "2026-04-23"
 ---
 
 ## What UGC is **not**
@@ -12,22 +13,61 @@ last_verified: "2026-04-22"
 
 ## Concept
 
-UGC rewards pay creators who post about tokens/trends on **X** and **TikTok** when their posts qualify and when fee pools allocate budget. Engagement and referral-driven volume both matter in scoring (see engineering simulators in `dashboard/docs/FEE_FORMULAS.md`).
+**UGC (user-generated content)** rewards creators for posting about tokens. Creators earn from **trading fees** when their content drives attention and engagement—separate from leaderboard **points**.
 
-## Indexing (high level)
+## Connecting socials (requirement)
 
-Product docs describe hashtag / keyword rules such as TikTok posts tagging `#canonical_name` and X posts containing `$TICKER` or a bracketed keyword. **Indexing ≠ automatic payout**—moderation can remove posts or ban abusers.
+1. Open **profile / settings**.
+2. Connect **TikTok** and/or **X** (one account per platform; you can disconnect and reconnect).
+3. Linked socials are **required** to become eligible for UGC payouts.
 
-## Payout cadence
+See [Connect X](/user-guides/account/connecting-x) and [Connect TikTok](/user-guides/account/connecting-tiktok).
 
-Notion product drafts cite **weekly** distributions (example: Fridays **12:00 PM PDT**) after graduation milestones. **Confirm the schedule banner inside the app**—if UI disagrees with internal docs, trust **UI**.
+## Posting so posts count
 
-## Eligibility checklist
+- **X:** include **`$TICKER`** in the post.
+- **TikTok:** include the **token hashtag** pattern the app documents (often tied to canonical naming).
 
-- Linked **X** / verified **TikTok** on ip.world,
-- Meet impression floors shown in live rules,
-- Pass moderation,
-- Token meets pool eligibility (e.g., post-graduation in product drafts).
+Indexed posts can surface on the token’s **UGC / feed** surfaces.
+
+## Feeds (per token)
+
+Each token can show a dedicated content feed. Typical **filters** include creator type, platform, and time window. **Sort** modes often include **Featured** (default, driven by a **virality score** that favors traction with time decay), **Newest**, **My posts**, and **Most impressions**.
+
+See [Social feeds](/user-guides/explore/social-feeds).
+
+## Indexing vs payout
+
+**Indexing ≠ payout.** Moderation can remove posts or ban abuse; pools must have budget.
+
+## Eligibility (checklist)
+
+- Connected **X** and/or verified **TikTok** on ip.world.
+- Meet **weekly engagement thresholds** shown in live rules.
+- At least one **active indexed** post in the scoring window.
+- Content passes **moderation**.
+
+Eligibility **does not** guarantee a payout.
+
+## Payout cadence and mechanics
+
+Internal product copy targets **weekly** distributions (example: **Friday, 12:00 PM PDT**). Typical gating (confirm in-app banners):
+
+- Token is **bonded** (post–bonding-curve milestone),
+- At least one **eligible creator**,
+- UGC pool has **funds**.
+
+Scoring highlights from Gitbook copy:
+
+- **Top creators** (example cap: **top 100**) share the weekly allocation.
+- Score weights **impressions** plus **referral-driven volume**.
+- Fee allocation examples: **12.5%** of **`IP`** fees and **25%** of **token** fees routed to creator pools (see [Tokenomics and fees](/user-guides/rewards/tokenomics-and-fees)—engineering files may refine exact numerics).
+
+Distribution is **automatic** in product messaging (no manual “claim” step where the app handles it end-to-end—still verify the live token page).
+
+## Engineering detail
+
+Engagement and referral-driven volume both feed scoring simulators in `dashboard/docs/FEE_FORMULAS.md`.
 
 ## Next
 

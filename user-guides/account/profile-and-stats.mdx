@@ -1,8 +1,26 @@
 ---
 title: "Profile and stats"
 description: "What your public profile shows: identity, balances, activity tabs, and referrals."
-last_verified: "2026-04-22"
+last_verified: "2026-04-23"
 ---
+
+## Layout (Gitbook / product)
+
+Many builds use a **two-panel** layout:
+
+**Left / summary column**
+
+- Profile identity and **rank**,
+- **Connected socials**,
+- Key stats (**points**, **tokens**, **referrals**, **posts**),
+- **Referral link** (username-based URL, one-click copy),
+- **Unrealized PnL** where enabled.
+
+**Main column**
+
+- **Holdings** (created tokens, owned tokens, market data + PnL),
+- **Activity**,
+- **Feed** (your indexed **X** / **TikTok** with engagement, earnings, and deep links to posts).
 
 ## Header
 
@@ -14,6 +32,14 @@ Your profile typically includes:
 - **Linked socials** (icons may respect visibility toggles if enabled),
 - **Balances and volume** summaries where the app exposes them.
 
+## Ranking tiers
+
+Leaderboard / profile **ranks** are described in product copy as five tiers:
+
+**Normie → Casual → Degen → Trencher → Legend**
+
+Points accrue from **trading**, **token creation**, **referrals**, and **engagement** (exact weights: see [Points and leaderboard](/user-guides/rewards/points-and-leaderboard)).
+
 ## Tabs
 
 Profile tabs can include **Tokens**, **Trends**, **Takes**, **Referrals**, and other activity views as shipped—use the live app as source of truth for ordering and labels.
@@ -24,7 +50,11 @@ Copy your referral link from profile. Format:
 
 `https://ip.world?ref=YOURCODE`
 
-See [Referral program](/user-guides/rewards/referrals) for how points interact.
+See [Referral program](/user-guides/rewards/referrals) for **fee-share** vs **points** mechanics.
+
+## PnL tracking
+
+Where enabled, surfaces include **per-token PnL**, **total unrealized PnL**, and **shareable PnL cards**.
 
 ![Referral UI figure](/images/profile-referrals.svg)
 

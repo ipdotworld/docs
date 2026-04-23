@@ -1,12 +1,12 @@
 ---
 title: "Launch a token"
 description: "Create a new market under an existing trend."
-last_verified: "2026-04-22"
+last_verified: "2026-04-23"
 ---
 
 ## When to use this flow
 
-Use **Launch token** when the **trend already exists** and you are adding another market under it.
+Use **Launch token** when the **trend (umbrella idea) already exists** and you are adding another tradable market under it. If no umbrella exists yet, start with [Create a trend](/user-guides/launch/create-a-trend) instead.
 
 See [Trends and tokens](/user-guides/trends-and-tokens).
 
@@ -15,23 +15,29 @@ See [Trends and tokens](/user-guides/trends-and-tokens).
 ## Steps
 
 <Steps>
-  <Step title="Open Create token">
-    **Create → Create token** (may read “remix” in UI).
+  <Step title="Open Create">
+    Click **Create**, then choose the flow for a **new token** under an existing trend (**Create token**; UI may still say **remix** in places).
   </Step>
-  <Step title="Pick the trend">
-    Search and select the umbrella you are launching under.
+  <Step title="Link the umbrella">
+    Search and select the **existing trend** you are launching under (the shared “idea” page for that culture).
   </Step>
   <Step title="Token identity">
-    **Image**, **name**, **ticker** (`$TICKER`), **description**, **socials** (token socials include **Telegram**).
+    Enter **name**, **ticker** (`$TICKER`), **description**, and **image**; add **token socials** (includes **Telegram** where exposed).
+  </Step>
+  <Step title="Category">
+    Pick the category that best matches the culture type—[Metadata, socials, and anti-snipe](/user-guides/launch/metadata-socials-and-antisnipe#category).
+  </Step>
+  <Step title="Launch options">
+    Confirm any **Creator** vs **Community** or other toggles the form shows for this deployment (some builds inherit the parent trend’s model—follow the live screen).
   </Step>
   <Step title="Anti-snipe (optional)">
-    Toggle early concentration limits—[details](/user-guides/launch/metadata-socials-and-antisnipe).
+    Toggle early wallet caps—[Anti-snipe](/user-guides/launch/metadata-socials-and-antisnipe#anti-snipe).
   </Step>
-  <Step title="Creator buy">
-    Choose buy size in **`IP`**; the UI shows estimated tokens and % of supply.
+  <Step title="Initial purchase">
+    Select creator opening buy in **`IP`** (roughly **0.1%–3%** of supply where the UI allows—confirm the slider).
   </Step>
-  <Step title="Launch">
-    Submit and confirm in your wallet.
+  <Step title="Pay launch fee and confirm">
+    Launches commonly charge **10 `IP`** as an anti-spam cost—confirm the exact number and recipient in the wallet prompt. Submit; the token should be **live and tradeable** once the transaction lands.
   </Step>
 </Steps>
 

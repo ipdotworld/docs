@@ -20,113 +20,58 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "FAQ",
+          "icon": "circle-question-mark",
+          "href": "/user-guides/reference/faq"
+        },
+        {
+          "anchor": "Glossary",
+          "icon": "book-open",
+          "href": "/user-guides/reference/glossary"
+        },
+        {
+          "anchor": "Account & settings",
+          "icon": "user",
+          "href": "/user-guides/account/sign-in-methods"
+        },
+        {
+          "anchor": "Safety",
+          "icon": "shield",
+          "href": "/user-guides/safety/reporting"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "User guide",
         "groups": [
           {
-            "group": "Start here",
+            "group": "GETTING STARTED",
+            "pages": ["index", "user-guides/getting-started"]
+          },
+          {
+            "group": "CORE CONCEPTS",
             "pages": [
-              "index",
-              "user-guides/what-is-ipworld",
               "user-guides/trends-and-tokens",
-              "user-guides/getting-started",
-              "user-guides/platform-map"
+              "user-guides/trading/payment-methods",
+              "user-guides/rewards/holder-rewards",
+              "user-guides/rewards/ugc-program",
+              "user-guides/manage/treasury-and-proposals",
+              "user-guides/verification/verification-overview",
+              "user-guides/rewards/overview"
             ]
           },
           {
-            "group": "Account and access",
-            "pages": [
-              "user-guides/account/sign-in-methods",
-              "user-guides/account/embedded-wallets",
-              "user-guides/account/profile-and-stats",
-              "user-guides/account/settings-and-profile",
-              "user-guides/account/connecting-x",
-              "user-guides/account/connecting-tiktok",
-              "user-guides/account/search-and-shortcuts"
-            ]
-          },
-          {
-            "group": "Discover",
-            "pages": [
-              "user-guides/explore/navigating-trends",
-              "user-guides/explore/navigating-tokens",
-              "user-guides/explore/search-filters-and-sort",
-              "user-guides/explore/social-feeds",
-              "user-guides/explore/virality"
-            ]
-          },
-          {
-            "group": "Token page",
-            "pages": [
-              "user-guides/tokens/token-page-overview",
-              "user-guides/tokens/charts-and-metrics",
-              "user-guides/tokens/holders-and-transactions",
-              "user-guides/tokens/comments"
-            ]
-          },
-          {
-            "group": "Trading",
+            "group": "HOW-TO GUIDES",
             "pages": [
               "user-guides/trading/overview",
-              "user-guides/trading/payment-methods",
-              "user-guides/trading/trade-modes-and-switches",
-              "user-guides/trading/fees-slippage-and-failures"
-            ]
-          },
-          {
-            "group": "Launch",
-            "pages": [
-              "user-guides/launch/create-a-trend",
-              "user-guides/launch/create-a-token",
-              "user-guides/launch/metadata-socials-and-antisnipe"
-            ]
-          },
-          {
-            "group": "Verification and trust",
-            "pages": [
-              "user-guides/verification/verification-overview",
-              "user-guides/verification/creator-vs-community-trends",
-              "user-guides/verification/creator-trends",
-              "user-guides/verification/community-trends",
-              "user-guides/verification/getting-verified",
-              "user-guides/verification/claiming-a-creator-trend",
-              "user-guides/verification/ip-token-license-itl",
-              "user-guides/verification/after-verification"
-            ]
-          },
-          {
-            "group": "Owners and treasury",
-            "pages": [
-              "user-guides/manage/trend-owner-dashboard",
-              "user-guides/manage/treasury-and-proposals",
-              "user-guides/manage/community-governance",
-              "user-guides/manage/endorsements"
-            ]
-          },
-          {
-            "group": "Rewards and economics",
-            "pages": [
-              "user-guides/rewards/overview",
-              "user-guides/rewards/points-and-leaderboard",
-              "user-guides/rewards/referrals",
-              "user-guides/rewards/ugc-program",
-              "user-guides/rewards/holder-rewards",
-              "user-guides/rewards/tokenomics-and-fees"
-            ]
-          },
-          {
-            "group": "Safety",
-            "pages": [
-              "user-guides/safety/content-moderation",
-              "user-guides/safety/reporting"
-            ]
-          },
-          {
-            "group": "Reference",
-            "pages": [
-              "user-guides/reference/faq",
-              "user-guides/reference/glossary"
+              "user-guides/how-to/launch-a-coin",
+              "user-guides/how-to/earn-holder-rewards",
+              "user-guides/how-to/earn-ugc-rewards",
+              "user-guides/how-to/verify-a-coin"
             ]
           }
         ]
@@ -144,8 +89,7 @@
           }
         ]
       }
-    ],
-    "global": {}
+    ]
   },
   "redirects": [
     { "source": "/user-guides/ips-and-tokens", "destination": "/user-guides/trends-and-tokens" },
