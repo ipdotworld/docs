@@ -1,18 +1,95 @@
 ---
 title: "Overview"
 sidebarTitle: "Overview"
-description: "ip.world documentation - culture markets on Story and Solana."
+description: "Internet culture meets on-chain markets. Trade trends, earn fees, build community on Story and Solana."
 last_verified: "2026-04-23"
 ---
 
-**ip.world** is a launchpad for culture markets: internet culture becomes tokens you can trade, with trading fees that reward creators, holders, communities, and the protocol.
+**ip.world** turns internet culture into on-chain markets. A meme, a creator, a character, a movement — anything can become a **Trend**. Every Trend can have a **Token**. Every trade on that token generates fees that flow back to the people who made the culture worth trading.
 
-<CardGroup cols={1}>
-  <Card title="Quickstart" icon="book-open-cover" href="/user-guides/getting-started">
-    Sign in, fund your account, make a first trade, and learn how rewards differ.
+That's the whole idea. We call it **culture markets**.
+
+<Frame>
+  <img src="/images/overview-hero.png" alt="ip.world explore feed — trending tokens grid" />
+</Frame>
+
+## How it works
+
+<CardGroup cols={3}>
+  <Card title="Trends and Tokens" icon="fire">
+    A **Trend** is the canonical page for an idea. A **Token** is the tradable market under it. Launch one, trade one, or govern one.
+  </Card>
+  <Card title="Fees go back to culture" icon="circle-dollar-to-slot">
+    Trading fees split four ways: creator rewards, holder rewards, community treasury, and the protocol. Hold a token. Post about it. Earn from both.
+  </Card>
+  <Card title="Community treasury" icon="vault">
+    Every token has a treasury funded by its own trading volume. Holders vote on how to use it. The market governs itself.
+  </Card>
+</CardGroup>
+
+### Fee flow per token
+
+Every token's LP holds two assets — **$IP** and the **Meme token**. Each side generates fees that split differently.
+
+```mermaid
+%%{init: {'theme': 'dark', 'themeVariables': {'primaryColor': '#AD74FE', 'primaryTextColor': '#fff', 'primaryBorderColor': '#C093FF', 'lineColor': '#C093FF', 'secondaryColor': '#1a1a2e', 'tertiaryColor': '#321F4D'}}}%%
+graph LR
+    subgraph LP["Token LP"]
+        direction TB
+        IP["$IP side"]
+        Meme["Meme side"]
+    end
+
+    IP -->|"50%"| Protocol(["Protocol"])
+    IP -->|"25%"| ReAdd(["LP Re-Add"])
+    IP -->|"10%"| Owner["IP Owner"]
+    IP -->|"10%"| UGC1(["UGC Creators"])
+    IP -->|"5%"| Referrer(["Referrer"])
+
+    Meme -->|"60%"| Treasury["Community Treasury"]
+    Meme -->|"30%"| Holders{"Token Holders"}
+    Meme -->|"10%"| UGC2(["UGC Creators"])
+
+    Treasury -.->|"Unlocked after verification"| Owner
+
+    style LP fill:#1a1a2e,stroke:#AD74FE,stroke-width:2px,color:#fff
+    style IP fill:#AD74FE,stroke:#C093FF,stroke-width:2px,color:#fff
+    style Meme fill:#f5c842,stroke:#c9a030,stroke-width:2px,color:#000
+    style Owner fill:#321F4D,stroke:#AD74FE,stroke-width:2px,color:#fff
+    style Treasury fill:#321F4D,stroke:#AD74FE,stroke-width:2px,color:#fff
+    style Holders fill:#1a1a2e,stroke:#C093FF,stroke-width:1px,color:#fff
+    style Protocol fill:#1a1a2e,stroke:#555,stroke-width:1px,color:#aaa
+    style ReAdd fill:#1a1a2e,stroke:#555,stroke-width:1px,color:#aaa
+    style UGC1 fill:#1a1a2e,stroke:#c9a030,stroke-width:1px,color:#f5c842
+    style UGC2 fill:#1a1a2e,stroke:#c9a030,stroke-width:1px,color:#f5c842
+    style Referrer fill:#1a1a2e,stroke:#555,stroke-width:1px,color:#aaa
+```
+
+<Tip>
+  One Trend can have **multiple tokens** — each with its own LP, fee splits, holders, and UGC pool. The IP Owner and Community Treasury sit at the Trend level, shared across all tokens under it.
+</Tip>
+
+## Two chains. Three assets.
+
+ip.world runs on **Story** and **Solana**. Trade with **IP**, **USDC**, or **SOL**. Bring your own wallet or use the embedded ones provisioned at sign-in.
+
+## Start here
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/user-guides/getting-started">
+    Sign in, fund your account, and make your first trade in under five minutes.
+  </Card>
+  <Card title="Trends and tokens" icon="lightbulb" href="/user-guides/coin-types">
+    The two types of markets — creator-type and community-type — and how they differ.
+  </Card>
+  <Card title="Rewards" icon="trophy" href="/user-guides/rewards/overview">
+    Five separate programs: points, referrals, UGC, holder rewards, and treasury. Don't mix them up.
+  </Card>
+  <Card title="Launch a coin" icon="plus" href="/user-guides/how-to/launch-a-coin">
+    Create your own Trend and Token from scratch.
   </Card>
 </CardGroup>
 
 <Info>
-  **Community:** [Discord](https://discord.gg/ipworld) for live help and announcements.
+  **Community:** [Discord](https://discord.gg/ipworld) — live help, announcements, and the people actually using this.
 </Info>
