@@ -10,7 +10,7 @@ last_verified: "2026-04-23"
 Open any token page and hit the **Trade** panel on the right. Toggle **Buy** or **Sell**, pick your pay asset, enter the amount, and confirm the wallet prompt. Done.
 
 <Frame>
-  <img src="/images/trading-panel-buy.png" alt="Trade panel — buy mode with pay asset selector" />
+  ![Trade panel — buy mode with pay asset selector](/images/trading-panel-buy.png)
 </Frame>
 
 ## Pay assets
@@ -21,9 +21,11 @@ Three assets, two chains. All trades settle on **Story**.
   <Card title="$IP" icon="/images/icon-ip.svg">
     Native gas token on Story. Default pay asset — no bridge needed.
   </Card>
+
   <Card title="$USDC" icon="/images/icon-usdc.svg">
     Works on both Story and Solana. Solana USDC is bridged to Story via Relay before the swap executes.
   </Card>
+
   <Card title="$SOL" icon="/images/icon-sol.svg">
     Paid from your Solana embedded wallet. Bridged to Story through Relay, then swapped.
   </Card>
@@ -44,7 +46,7 @@ For the full breakdown, see [Coin types → Fee distribution](/user-guides/coin-
 Set your slippage tolerance in the trade panel before confirming. A tight setting on a volatile token will cause the transaction to revert if the price moves during the block. Loosen slippage for large trades or fast-moving markets.
 
 <Frame>
-  <img src="/images/trading-slippage.png" alt="Slippage setting in the trade panel" />
+  ![Slippage setting in the trade panel](/images/trading-slippage.png)
 </Frame>
 
 ## Common failures
@@ -53,12 +55,15 @@ Set your slippage tolerance in the trade panel before confirming. A tight settin
   <Accordion title="User rejected">
     You cancelled the wallet prompt. Just try again.
   </Accordion>
+
   <Accordion title="Insufficient funds">
-    You need more **\$IP** for gas, or more of the pay asset you selected. Fund your wallet from the wallet menu or the [Quickstart](/user-guides/getting-started#fund-your-wallet).
+    You need more **\$IP** for gas, or more of the pay asset you selected. Fund your wallet from the wallet menu or the navbar deposit.
   </Accordion>
+
   <Accordion title="Anti-snipe limit exceeded">
     The trade would push your wallet over the **2% cap** inside the 5-minute anti-snipe window on newly launched tokens. Wait for the window to pass or reduce your trade size.
   </Accordion>
+
   <Accordion title="Relay did not complete">
     A SOL or Solana USDC route failed mid-bridge. Your funds stay on the source chain. Read the error text, wait for the bridge to settle or retry — do not sign a replacement until the original has resolved.
   </Accordion>
@@ -70,9 +75,11 @@ Set your slippage tolerance in the trade panel before confirming. A tight settin
   <Card title="Trade coins" icon="book-open" href="/user-guides/how-to/trade-coins">
     Step-by-step walkthrough of buying and selling.
   </Card>
+
   <Card title="Coin types" icon="fire" href="/user-guides/coin-types">
     How fees split differently for creator-type vs community-type tokens.
   </Card>
+
   <Card title="Rewards" icon="trophy" href="/user-guides/rewards/overview">
     How trading generates rewards for holders, creators, and UGC posters.
   </Card>
