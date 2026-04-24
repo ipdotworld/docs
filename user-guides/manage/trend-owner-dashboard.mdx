@@ -1,36 +1,33 @@
 ---
 title: "Trend owner dashboard"
-description: "Harvest, claim, holdings, and treasury actions after you verify and claim a creator trend."
-last_verified: "2026-04-22"
+description: "Harvest earnings, manage claims, and run treasury actions after you verify a creator trend."
+last_verified: "2026-04-23"
 ---
 
-## Who this is for
-
-You already **claimed** a **creator trend**. If not, start at [Claiming a creator trend](/user-guides/verification/claiming-a-creator-trend).
+The trend owner dashboard is available once you verify and claim a creator trend. If you have not claimed yet, start at Claiming a creator trend.
 
 ![Owner dashboard figure](/images/manage-owner.svg)
 
-## Treasury and proposals
-
-Owner dashboards pair a **Safe treasury** with **proposal-gated** movements. Heavyweight actions (claims, transfers, burns) should route through proposals instead of silent transfers.
-
-Creators retain **cancel / veto** style safety rails on their own umbrellas—see in-app governance copy.
-
 ## Holdings and claims
 
-You will see tables for tokens under your umbrella with:
+The dashboard lists every token under your trend, with per-token:
 
-- **Claimable** balances,
-- **Claimed** history,
-- actions such as **Claim**, **Sell**, **Transfer**, **Burn** when exposed.
+- **Claimable balance** - the vested portion of your 3% allocation plus unclaimed fee share.
+- **Claim history** - what you have already claimed.
+- **Actions** - Claim, Sell, Transfer, Burn.
 
-Some flows are intentionally **two-step** (harvest then claim) to match on-chain accounting—read the button labels in the modal you are using.
+Claims are a **two-step flow**: first harvest the fees from the token contract into your claimable balance, then claim the balance to your wallet. The modal labels make the step you are on clear.
+
+## Treasury
+
+The dashboard pairs a Safe treasury with proposal-gated movements. Any spend larger than a trivial claim routes through a proposal so the owner action is auditable. Creators retain a cancel / veto rail on proposals submitted against their own trend.
+
+See [Treasury and proposals](/user-guides/manage/treasury-and-proposals).
 
 ## Endorsements
 
-Signal token quality once verified—[Endorsements](/user-guides/manage/endorsements).
+Endorse tokens under your trend to mark them as canonical.
 
 ## Next
 
 - [Treasury and proposals](/user-guides/manage/treasury-and-proposals)
-- [Tokenomics and fees](/user-guides/rewards/tokenomics-and-fees)

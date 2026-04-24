@@ -1,22 +1,31 @@
 ---
 title: "Charts and metrics"
-description: "Price and market cap views, bonding curve, graduation, and holder counts."
-last_verified: "2026-04-22"
+description: "Price chart, market cap toggle, bonding curve, and graduation progress on the token page."
+last_verified: "2026-04-23"
 ---
 
 ## Chart modes
 
-The token chart supports viewing price history; some builds also expose a **market cap** view toggle—use the control in the chart header.
+The token chart supports two views, toggled from the chart header:
+
+- **Price** - historical price of the token.
+- **Market cap** - price multiplied by circulating supply.
+
+Timeframe controls on the chart let you switch between 5m, 1h, 1d, 1w, and all-time.
 
 ## Bonding curve and graduation
 
-Before graduation, supply and price discovery are driven by the bonding curve UI (`bonding-curve` component). **Graduation %** shows progress toward migrating liquidity—exact threshold is **chain/config specific**; follow the number shown in UI rather than third-party writeups.
+Before a token graduates, price discovery runs on a **bonding curve**. The curve determines price as a deterministic function of supply bought - early buyers pay less than later buyers.
+
+The **Graduation %** indicator in the chart panel tracks progress toward graduation. When graduation hits 100%, the token migrates from the bonding curve into a deeper Uniswap V3 liquidity pool, and price is set by AMM trading from that point forward.
+
+Graduation is also when UGC payouts and holder rewards turn on for the token.
 
 ## Holder count
 
-The chart panel surfaces **holders** alongside **graduation** for quick context.
+The chart panel shows the current number of holders alongside graduation progress for quick context.
 
 ## Next
 
-- [Holders and transactions](/user-guides/tokens/holders-and-transactions)
-- [Tokenomics and fees](/user-guides/rewards/tokenomics-and-fees)
+- Holders and transactions
+- Tokenomics and fees

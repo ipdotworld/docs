@@ -1,6 +1,6 @@
 ---
 title: "Metadata, socials, and anti-snipe"
-description: "Trend vs token fields, socials, anti-snipe limits, and creator buy hints."
+description: "Trend and token fields, categories, anti-snipe limits, and the creator opening buy."
 last_verified: "2026-04-23"
 ---
 
@@ -8,56 +8,59 @@ last_verified: "2026-04-23"
 
 ### Image
 
-Primary card art for the umbrella page.
+The primary card art for the trend page.
 
 ### Canonical name and aliases
 
-**Name** is canonical; **aliases** catch alternate spellings and search variants.
+The name is the canonical title of the trend. Aliases catch alternate spellings and common search variants, so people land on your trend even when they type it wrong.
 
 <Tip>
-  Add aliases the way people actually type the meme.
+  Add aliases the way people actually type the meme - abbreviations, misspellings, and slang all help.
 </Tip>
 
 ### Ownership type
 
-- **Creator trend** — optional owner link for verification.
-- **Community trend** — token-holder coordinated; token launch required.
-
-See [Creator vs community trends](/user-guides/verification/creator-vs-community-trends).
+- **Creator trend** - a real-world IP with a single owner. The owner links X or TikTok during verification.
+- **Community trend** - a crypto-native or bottom-up movement owned by holders. A token launch is required at creation.
 
 ### Category
 
-Categories organize Explore around types of internet culture. Marketing copy often lists **Character**, **Meme**, **Trend**, **Game**, and **Other**—if several fit, pick the strongest match. The **live create form** is authoritative; picker labels can ship ahead of static docs.
+Pick the category that best describes the trend. ip.world uses these eleven:
+
+Pet, Person, Trend, Game, Technology, Meme, Movement, Brand, Character, Art, Misc.
+
+If several fit, pick the strongest match. The category also determines which verification tracks the trend is eligible for later.
 
 ### Trend socials
 
-Website, **X**, **TikTok**, **Instagram**, **YouTube** when exposed in the form.
+Website, X, TikTok, Instagram, and YouTube.
 
 ## Token fields
 
-### Token image, name, ticker
+### Image, name, ticker
 
-**Ticker** is shown with **`$`** prefix in feeds and search.
+The ticker is shown with a `$` prefix in feeds and search (e.g. `$MYTOKEN`).
 
 ### Token socials
 
-Adds **Telegram** in addition to the trend social list.
+Same as trend socials, plus Telegram.
 
 ## Copy trend detail to token
 
-When launching the first token with a new trend, you can copy image/description/socials as a starting point—still customize when the market needs different positioning.
+When you launch the first token for a new trend, the form pre-fills the token image, description, and socials from the trend. Override any field the token needs to market differently.
 
 ## Anti-snipe
 
-Optional at launch: limits how much supply any single wallet can scoop in the first minutes after launch. Product copy describes **up to ~2% of supply per wallet** for the **first ~5 minutes**—designed to reduce early concentration from snipers. **Always read the create screen**; caps are enforced in the contract/UI you confirm against.
+Anti-snipe is an optional launch toggle that caps how much of the supply any single external wallet can hold during the first few minutes after launch. The cap is **2% of supply per wallet** for **5 minutes** from launch. It exists to blunt bots and snipers so the token can distribute more evenly.
 
-Trades that would violate limits surface errors such as **Anti-snipe limit exceeded**.
+Trades that would push a wallet over the cap during the anti-snipe window fail with an **Anti-snipe limit exceeded** error.
 
-## Creator buy
+## Creator opening buy
 
-Initial purchase is denominated in **`IP`**. The UI typically allows choosing an opening buy in the **~0.1%–3% of supply** range (subject to limits shown live), with estimates for tokens received and fees.
+Your opening buy is denominated in IP, SOL, or USDC and is free-form - enter any amount. The form also exposes quick-pick buttons at **0.25%, 0.5%, 1%, 2%, and 3%** of supply as convenience shortcuts. The panel shows the expected tokens received and the IP cost before you confirm.
+
+The **30 IP launch fee** is added on top of your opening buy.
 
 ## Next
 
 - [Trading overview](/user-guides/trading/overview)
-- [Fees, slippage, and failures](/user-guides/trading/fees-slippage-and-failures)

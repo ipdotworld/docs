@@ -1,46 +1,42 @@
 ---
 title: "Treasury and proposals"
 sidebarTitle: "Community Treasury"
-description: "Token page Treasury tab, Snapshot voting, and proposal lifecycle."
+description: "The Treasury tab on a token page, Snapshot voting, and the proposal lifecycle."
 last_verified: "2026-04-23"
 ---
 
-## Where this lives
+Every token has a treasury funded by a slice of trading fees (45% of swap fees, per the fee breakdown). Who controls the treasury depends on the trend's ownership type:
 
-On supported **token** pages, open the **Treasury** tab to browse proposals, vote, or create proposals when your wallet qualifies.
+- **Creator trends** - the verified trend owner controls the treasury through the owner dashboard.
+- **Community trends** - holders govern the treasury through Snapshot proposals.
 
-Every token has a **treasury** funded by a slice of trading fees—**creator**-style launches route treasury control to owners; **community**-style launches route governance to holders (see [Community governance](/user-guides/manage/community-governance)).
+## Where the Treasury tab lives
+
+On token pages for verified trends, the **Treasury** tab shows the current balance, open proposals, vote counts, and execution status.
 
 ![Treasury tab figure](/images/token-treasury.svg)
 
-## Proposal types (Gitbook / product)
+## Proposal types
 
-Common proposal families called out in product docs:
+Three proposal types are supported:
 
-- **Transfer** — move treasury assets per approved text.
-- **Burn** — destroy or route to burn mechanics as configured.
-- **Swap** — exchange treasury assets (for example into stables or LP components).
-
-Exact availability follows the live proposal composer.
+- **Transfer** - send treasury assets to a recipient address for an approved purpose.
+- **Burn** - destroy treasury-held tokens or route them to the burn mechanic configured for the trend.
+- **Swap** - exchange treasury assets (for example, swap IP to USDC to de-risk).
 
 ## Snapshot and execution
 
-Voting is powered by **Snapshot**; the UI may link out for full proposal text and results. **Execution** of passed actions is described in product copy as flowing through **Gnosis Safe** (or equivalent multisig) where configured—confirm the linked Safe from the proposal you are voting on.
+Voting runs on **Snapshot**. The ip.world Treasury tab embeds the Snapshot proposal and lets you vote inline; the Snapshot link is available for the full proposal text.
 
-## Proposal outcomes
+Once a proposal passes, execution runs through the **Gnosis Safe multisig** linked from the proposal. The Safe signers finalize the on-chain action. Always confirm the Safe address shown in the proposal matches the trend's official treasury before signing or voting.
 
-Community math uses:
+## Pass rule
 
-- **YES > NO**
-- **YES ≥ REQUIRED_YES** where **REQUIRED_YES = 0.10 + 1 × NO** (baseline **10%** plus opposition scaling).
+A proposal passes when:
 
-Same rules are documented in [Community governance](/user-guides/manage/community-governance).
-
-## Shielded voting
-
-If a space uses shielded voting, you might not see your plaintext vote echoed in-app—follow Snapshot’s UI.
+- **YES > NO**, and
+- **YES ≥ 10% + NO** (baseline 10% plus one vote of YES per vote of NO).
 
 ## Next
 
-- [Community governance](/user-guides/manage/community-governance)
 - [Rewards overview](/user-guides/rewards/overview)

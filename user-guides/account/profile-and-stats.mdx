@@ -1,64 +1,43 @@
 ---
 title: "Profile and stats"
-description: "What your public profile shows: identity, balances, activity tabs, and referrals."
+description: "What your public profile shows - identity, balances, activity, and referrals."
 last_verified: "2026-04-23"
 ---
 
-## Layout (Gitbook / product)
+Your profile is your public identity on ip.world. It surfaces your stats, holdings, activity, and referral link.
 
-Many builds use a **two-panel** layout:
+## Layout
 
-**Left / summary column**
+The profile uses a two-panel layout:
 
-- Profile identity and **rank**,
-- **Connected socials**,
-- Key stats (**points**, **tokens**, **referrals**, **posts**),
-- **Referral link** (username-based URL, one-click copy),
-- **Unrealized PnL** where enabled.
+**Summary (left)**
 
-**Main column**
+- Avatar, username, bio, and rank.
+- Linked X and TikTok handles.
+- Headline stats: points, tokens held, tokens launched, referrals, posts.
+- Your referral link with one-click copy.
+- Unrealized PnL across all positions.
 
-- **Holdings** (created tokens, owned tokens, market data + PnL),
-- **Activity**,
-- **Feed** (your indexed **X** / **TikTok** with engagement, earnings, and deep links to posts).
+**Main (right)**
 
-## Header
+- **Holdings** - tokens you created and tokens you hold, with market data and per-position PnL.
+- **Activity** - your trades, launches, and comments.
+- **Feed** - your indexed X and TikTok posts with engagement stats and UGC earnings.
 
-Your profile typically includes:
+## Tiers
 
-- **Username** (set early—referral links depend on a stable public handle),
-- **Bio** and **avatar**,
-- **Wallet address** (truncated in UI lists),
-- **Linked socials** (icons may respect visibility toggles if enabled),
-- **Balances and volume** summaries where the app exposes them.
-
-## Ranking tiers
-
-Leaderboard / profile **ranks** are described in product copy as five tiers:
-
-**Normie → Casual → Degen → Trencher → Legend**
-
-Points accrue from **trading**, **token creation**, **referrals**, and **engagement** (exact weights: see [Points and leaderboard](/user-guides/rewards/points-and-leaderboard)).
+Your rank on the leaderboard is one of six tiers: **Normie → Casual → Degen → Trencher → Legend → GOAT**.
 
 ## Tabs
 
-Profile tabs can include **Tokens**, **Trends**, **Takes**, **Referrals**, and other activity views as shipped—use the live app as source of truth for ordering and labels.
+Profile tabs: **Tokens**, **Trends**, **Takes**, **Referrals**, **Activity**.
 
 ## Referrals
 
-Copy your referral link from profile. Format:
+Your referral link is `https://ip.world?ref=YOURUSERNAME`. The `ref` code is your username - keep your username stable so your attribution does not break.
 
-`https://ip.world?ref=YOURCODE`
+## PnL
 
-See [Referral program](/user-guides/rewards/referrals) for **fee-share** vs **points** mechanics.
-
-## PnL tracking
-
-Where enabled, surfaces include **per-token PnL**, **total unrealized PnL**, and **shareable PnL cards**.
+The profile shows per-token PnL, total unrealized PnL across your holdings, and shareable PnL cards you can post to X or TikTok.
 
 ![Referral UI figure](/images/profile-referrals.svg)
-
-## Next
-
-- [Settings](/user-guides/account/settings-and-profile)
-- [Points and leaderboard](/user-guides/rewards/points-and-leaderboard)

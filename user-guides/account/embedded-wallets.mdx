@@ -1,61 +1,53 @@
 ---
-title: "Embedded wallets on Story and Solana"
-description: "Why you get two embedded wallets, which one signs Story transactions, how Solana funds Relay routes, and how to export each embedded private key from Settings."
+title: "Embedded wallets"
+description: "The two embedded wallets ip.world provisions for you, what each one signs, and how to export private keys."
 last_verified: "2026-04-23"
 ---
 
-## What you get
+On first login, ip.world provisions two Dynamic MPC embedded wallets for your account:
 
-After sign-in, ip.world provisions **Dynamic MPC embedded wallets**:
+- **Story wallet (EVM)** - your canonical identity on ip.world. Signs every trade, claim, and governance transaction on Story.
+- **Solana wallet** - the funding and exit route for SOL and SPL-USDC. When you pay with SOL or withdraw to SOL, funds flow through this wallet via Relay.
 
-- **EVM embedded wallet** on **Story** — this is your **canonical identity** for the app and the wallet that signs **Story** transactions (swaps, claims, governance txs prepared in-app).
-- **Solana embedded wallet** — used as a **funding and exit route** for cross-chain **Relay** flows (for example bridging native **IP** on Story to **SOL** on Solana).
+Both wallets are controlled by Dynamic's MPC key management. You are not asked to install an external wallet to use ip.world.
 
-The client hook `useEmbeddedWallets` documents this split explicitly in code comments.
+## When Story actions stay disabled
 
-## Why Solana exists if Story is “home”
-
-Some pay and withdraw paths use **Relay** with Solana-native assets (**SOL**, **USDC** on Solana). You still control keys via Dynamic; you are not asked to run a separate Solana browser wallet unless you choose a wallet-based sign-in path.
-
-## Wagmi sync
-
-Some flows require the active wagmi connector to match your embedded EVM address. If a button stays disabled after login, wait a beat, refresh, or toggle the active wallet from the Dynamic UI—then retry.
+Story transactions require Dynamic's **active wallet** to match your embedded Story address. If a trade or claim button stays disabled after you sign in, refresh the page or open the Dynamic wallet menu and reconnect, then retry.
 
 ## Provisioning failures
 
-If embedded wallets fail to appear after login, the app retries creation and may **log you out** with a toast so you can start clean. Signing in again usually resolves stuck provisioning.
+If the embedded wallets fail to appear after login, the app retries creation automatically. If it cannot recover, you are signed out with a toast so you can sign in again fresh.
 
-## Export your embedded private key (Settings)
+## Export your private keys
 
-You can reveal the raw private key for each embedded wallet from **Settings → Security Settings** (tab label in the app: **Security Settings**).
+You can export the raw private key for each embedded wallet from **Settings → Security Settings**. Two rows appear:
 
-There are two rows:
+- **Story Wallet** - your embedded EVM address on Story.
+- **Solana Wallet** - your embedded Solana address.
 
-- **Story Wallet** — your embedded **EVM** address on Story.
-- **Solana Wallet** — your embedded **Solana** address used for Relay funding paths.
-
-Each row has **Show Recovery Key**. That opens a modal titled **IP Recovery Key** or **Solana Recovery Key** (matching the wallet you picked), powered by Dynamic’s `exportPrivateKey` flow. The key material is rendered into a container in the modal—often via a Dynamic **WaaS iframe** inside that surface.
+Each row has a **Show Recovery Key** button that opens a secure Dynamic export flow inside a hosted iframe.
 
 <Steps>
   <Step title="Open Security Settings">
-    Go to **Settings**, then choose **Security Settings** in the left nav (not Profile Settings).
+    Go to **Settings → Security Settings** in the left nav.
   </Step>
   <Step title="Pick the wallet">
-    Under **Story Wallet** or **Solana Wallet**, click **Show Recovery Key**.
+    Click **Show Recovery Key** on the row you want to export.
   </Step>
-  <Step title="Confirm you are alone">
-    Click **Reveal My Key**. A warning shelf appears: **Your key will be visible. Make sure no one is watching.** Use **Cancel** to back out, or continue only if you are in a private space.
+  <Step title="Confirm the warning">
+    Dynamic shows: **Your key will be visible. Make sure no one is watching.** Continue only if you are in a private space.
   </Step>
   <Step title="Reveal">
-    Click **I Understand, Reveal My Key**. While loading, the button shows **Revealing...** Dynamic then displays the export UI in the modal.
+    Click **I Understand, Reveal My Key**. The button shows **Revealing...** while loading, then Dynamic renders the key.
   </Step>
   <Step title="Copy or hide">
-    After the key appears, copy it only in a private environment—select the revealed text or use any copy control Dynamic surfaces inside the export UI. A **seconds countdown** appears in the key area (the view **auto-hides after 30 seconds**, with a thin progress bar along the bottom of the key box). Click **Hide Key** anytime to clear the surface early. Switching away from the tab (browser tab hidden) also clears the revealed key.
+    Copy the key only in a private environment. The key **auto-hides after 30 seconds** (a progress bar below the key tracks the countdown). Click **Hide Key** to clear the screen early. Switching tabs also clears the key.
   </Step>
 </Steps>
 
 <Warning>
-  Anyone who sees your private key can drain that wallet. Never share it, never paste it into Discord or “support” forms, and never screenshot it where backups sync to the cloud. ip.world staff will never DM you for keys.
+  Anyone with your private key can drain that wallet. Never share it, never paste it into Discord or support forms, and never screenshot it. ip.world staff will never DM you for keys.
 </Warning>
 
 ## Next

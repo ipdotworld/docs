@@ -1,43 +1,37 @@
 ---
 title: "Fees, slippage, and common failures"
-description: "Swap fees, editable fee destination breakdown, slippage, and common trade failures."
+description: "How trade fees split, setting slippage, and the usual failure modes."
 last_verified: "2026-04-23"
 ---
 
 ## Fees
 
-Trading involves DEX and protocol fees; the UI surfaces totals before you confirm.
-
-For the full economics story (bonding, graduation, engineering pointers), read [Tokenomics and fees](/user-guides/rewards/tokenomics-and-fees).
+Every trade pays a swap fee. The Trade panel shows the fee and your net amount before you confirm.
 
 ## Fee breakdown
 
-{/* Maintainers: edit only the markdown table below for the public fee split. Mirror tokenomics-and-fees.mdx if both must match. */}
-
-High-level **where swap-related fees are intended to go** (default mental model—exact per-token rules follow verification and pool config):
+Swap fees split across five destinations:
 
 | Destination | Share |
 | --- | ---: |
-| Community / treasury | 45% |
+| Community treasury | 45% |
 | Protocol | 25% |
-| Creators (UGC) | 15% |
+| UGC creators | 15% |
 | Liquidity | 12.5% |
 | Referrals | 2.5% |
 
-<Tip>
-  **Edit the table above** when product updates the public split. This mirrors [Tokenomics and fees](/user-guides/rewards/tokenomics-and-fees); update both if they should stay identical.
-</Tip>
+Community treasury, UGC, and referral shares are what reward the people behind the token. The protocol share funds ip.world itself, and the liquidity share is re-added to the pool.
 
 ## Slippage
 
-Set slippage according to your risk tolerance. Tight slippage on volatile tokens may cause reverts during large moves.
+Set slippage tolerance in the Trade panel before you confirm. A tight slippage setting on a volatile token can cause the transaction to revert when the price moves during the block - loosen slippage for large or late-mover trades.
 
 ## Common failures
 
-- **User rejected** — you cancelled in the wallet popup.
-- **Insufficient funds** — add **IP** for gas or increase pay token balance.
-- **Anti-snipe** — see [Anti-snipe](/user-guides/launch/metadata-socials-and-antisnipe).
-- **Relay incomplete** — bridge flows can fail with “did not complete successfully” messages from relay helpers; funds may remain on source chain—read the error text carefully.
+- **User rejected** - you cancelled the wallet prompt.
+- **Insufficient funds** - you need more **IP** for gas, or more of the pay asset you selected.
+- **Anti-snipe limit exceeded** - the trade would push a wallet over the 2% cap inside the 5-minute anti-snipe window.
+- **Relay did not complete** - a SOL or Solana-USDC route failed mid-bridge. Your funds stay on the source chain; read the error text, wait for the bridge to settle or retry, and do not sign a replacement until the original has resolved.
 
 ## Next
 

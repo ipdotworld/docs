@@ -1,33 +1,42 @@
 ---
 title: "Trading overview"
 sidebarTitle: "Trade Coins"
-description: "Buy and sell on a token page — flow, confirmations, and where to go next."
+description: "Buy and sell on a token page - flow, pay assets, and what the token page surfaces."
 last_verified: "2026-04-23"
 ---
 
 ## Buy and sell
 
-Open **Trade** on a token page. Pick direction (**buy** / **sell**), choose the **pay asset**, enter size, then confirm in your wallet UI when prompted.
+Open the **Trade** panel on a token page. Pick direction (**buy** or **sell**), pick the pay asset, enter the amount, and confirm in the wallet prompt.
 
-Common **pay / receive** assets include **SOL**, **USDC**, and **IP**—pick whichever the trade panel offers for that market (Relay routes may add Solana-side assets; Story-native trades center on **IP** and bridged stables).
-
-The trade experience is implemented primarily in `app/(dApp)/token/[tokenAddress]/trade/trade.tsx` with mode switching in `trade-switch.tsx`.
+Pay assets are **IP**, **USDC**, and **SOL**. ip.world trades settle on Story; when you pay with SOL or with USDC on Solana, the trade panel routes your funds through Relay before it executes the swap on Story.
 
 ![Trade panel figure](/images/trade-panel.svg)
 
-## What each token page surfaces
+## What the token page shows
 
-Alongside **Trade**, token pages typically expose **market cap**, **price chart**, **bonding progress** toward graduation, and **transaction history**—use those surfaces before sizing a position.
+Above the Trade panel, every token page shows:
 
-## Where swap fees go (editable breakdown)
+- Market cap and price chart.
+- Bonding curve progress toward graduation.
+- Holder list and transaction history.
+- Social feed and comments.
 
-Product **destination split** (percentages you can keep aligned with comms) lives on [Fees, slippage, and failures — Fee breakdown](/user-guides/trading/fees-slippage-and-failures#fee-breakdown). Edit the **table in that page** when leadership updates the public numbers.
+Check these surfaces before sizing a position.
 
-## Slippage and errors
+## Where swap fees go
 
-If a transaction fails, read the revert or toast message—common issues are insufficient **IP** for gas, insufficient pay token balance, user reject, or **anti-snipe** constraints on certain launches.
+Swap fees are split between the trend owner, UGC creators, holders, the community treasury, and the protocol.
+
+## Slippage and failures
+
+When a trade fails, the revert or toast message tells you why. The common causes are:
+
+- Not enough IP for gas.
+- Not enough pay-token balance.
+- You rejected the wallet prompt.
+- The trade would exceed an active anti-snipe cap.
 
 ## Next
 
 - [Payment methods](/user-guides/trading/payment-methods)
-- [Fees, slippage, and failures](/user-guides/trading/fees-slippage-and-failures)

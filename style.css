@@ -6,7 +6,7 @@
   --ipw-muted: #797979;
 }
 
-/* Mintlify exposes predictable regions — tune lightly so upgrades do not break */
+/* Mintlify exposes predictable regions - tune lightly so upgrades do not break */
 #navbar a:hover {
   color: var(--ipw-brand) !important;
 }

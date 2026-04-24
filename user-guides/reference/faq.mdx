@@ -6,64 +6,62 @@ last_verified: "2026-04-23"
 
 ## What chains does ip.world support?
 
-Markets and verification center on **Story** (EVM). The app also provisions a **Solana** embedded wallet and uses **Relay**-style routes so you can pay or receive **Solana-native assets** (for example **SOL**) where the trade panel exposes them—see [Payment methods](/user-guides/trading/payment-methods) and [Embedded wallets](/user-guides/account/embedded-wallets).
+Two: **Story** and **Solana**. Every token market and every verification lives on Story. Solana is used for payments - you can pay or withdraw in SOL or SPL-USDC, and those funds bridge through Relay. See [Payment methods](/user-guides/trading/payment-methods).
 
-## How much does it cost to create a token?
+## How much does it cost to launch a token?
 
-Launches typically charge **`IP`** as shown in the wallet prompt—internal Gitbook copy cites **10 `IP`** as the anti-spam launch cost. Always **confirm the exact amount in-app** before you sign.
-
-[Create a trend](/user-guides/launch/create-a-trend) · [Launch a token](/user-guides/launch/create-a-token)
+**30 IP**, charged as an anti-spam fee on top of your initial buy. The fee is protocol-set and can change - the exact charge shows in the wallet prompt before you sign.
 
 ## How do I earn from UGC?
 
-Link **X** and/or **TikTok**, post content that follows indexing rules (**`$TICKER`** on X; token hashtag pattern on TikTok), stay above engagement floors, pass moderation, and meet pool eligibility (often post-bonding). Payouts are automatic when you rank in a funded weekly window—see [UGC rewards](/user-guides/rewards/ugc-program).
+Link **X** and verify **TikTok**, then post about a token with the right signals - `$TICKER` on X, the token hashtag on TikTok. Posts that pass moderation and earn engagement split that token's UGC pool on Fridays. See [UGC rewards](/user-guides/rewards/ugc-program).
 
 ## How often are UGC payouts?
 
-Product messaging targets **weekly** runs (example: **Friday, 12:00 PM PDT**). If any banner or modal in the app disagrees with docs, **trust the UI**.
+**Every Friday at 12:00 PM PDT.**
 
-## What is the verification process?
+## How does verification work?
 
-Submit evidence → **ip.world reviews** → on approval, **badges and economics** turn on. Creator umbrellas add a **claim** step for the real owner; community umbrellas lean on **milestones**. [Getting verified](/user-guides/verification/getting-verified)
+Creator trends: submit the five-step verification form from the trend page. Moderators review within 7 business days. Once approved, you claim the trend and activate your 3% allocation and fee share.
+
+Community trends: no form - the trend verifies automatically when its top token hits $1M market cap, 1,000 holders, and 5–7 days of age.
 
 ## How do community treasuries work?
 
-A slice of trading fees fills each token’s **treasury**. Holders propose and vote (**Snapshot**), then execution flows through a **Safe** multisig when configured. [Treasury and proposals](/user-guides/manage/treasury-and-proposals)
+45% of every trade's swap fee flows into the trend's treasury. For community trends, holders govern the treasury through Snapshot proposals, with execution through a Gnosis Safe multisig. See [Treasury and proposals](/user-guides/manage/treasury-and-proposals).
 
 ## What is anti-snipe?
 
-Optional launch setting that caps how much supply a **single wallet** can buy in the **first minutes** after launch (Gitbook: about **2% max per wallet for ~5 minutes**) to blunt snipers.
-
-[Metadata, socials, and anti-snipe](/user-guides/launch/metadata-socials-and-antisnipe#anti-snipe)
+An optional launch toggle that caps each external wallet at **2% of supply** for the **first 5 minutes** after launch. It blunts bots and reduces early concentration so the token distributes more evenly.
 
 ## How do holder rewards work?
 
-Holders earn **passive** fee share tied to **positions and volume**—product copy emphasizes **no staking / lockups** in the marketing story; engineering still uses windows and snapshots under the hood. [Holder rewards](/user-guides/rewards/holder-rewards)
+Holders automatically share a cut of every trade's fees - **30% of the token-side fee** and **50% of the IP-side fee**. No staking, no locking. Larger holdings earn a larger share. See [Holder rewards](/user-guides/rewards/holder-rewards).
 
 ## Should I create a trend or a token?
 
-If the umbrella already exists and you are launching another market, create a **token** under it.
-
-Read [Trends and tokens](/user-guides/trends-and-tokens) and [Launch a token](/user-guides/launch/create-a-token).
+If a trend already exists for the idea, launch a **token** under the existing trend. Create a new **trend** only when the idea has no home yet.
 
 ## Why does verification matter?
 
-Verification reduces impersonation, unlocks **owner dashboards** and **endorsements** for creator umbrellas, and unlocks **governance** for verified community umbrellas.
+It proves ownership (for creator trends) or that the community hit the required milestones (for community trends), so fees route honestly. Verified creator trends unlock the owner dashboard and endorsements. Verified community trends unlock governance.
 
-[Verification overview](/user-guides/verification/verification-overview)
+See [Verification overview](/user-guides/verification/verification-overview).
 
-## What does **READY FOR CLAIM** mean?
+## What does READY FOR CLAIM mean?
 
-The moderator-approved creator umbrella is waiting for the real owner to finish **Claim ownership** with a matching social login.
+The moderator-approved creator trend is waiting for the real owner to finish the claim. The owner needs a connected X or TikTok that matches the trend's owner link.
 
-[Claiming a creator trend](/user-guides/verification/claiming-a-creator-trend)
+## Which wallet signs Story transactions?
 
-## What wallet signs Story transactions?
+Your **embedded EVM wallet on Story**, provisioned by Dynamic. The Solana embedded wallet handles SOL and SPL-USDC routing through Relay.
 
-Your **embedded EVM wallet** on Story. Solana embedded is mainly for **Relay** funding routes.
+## What are the leaderboard tiers?
 
-[Embedded wallets](/user-guides/account/embedded-wallets)
+**Normie (≤500) → Casual (≤2,000) → Degen (≤6,000) → Trencher (≤15,000) → Legend (≤30,000) → GOAT (30,001+)**.
 
-## Where do points vs UGC vs holders differ?
+## How are points and fee-share different?
 
-[Rewards overview](/user-guides/rewards/overview)
+Points are an off-chain season score that rank you on the leaderboard. Fee-share is real on-chain earnings from trades. The same action (like a successful referral) can earn both.
+
+See [Rewards overview](/user-guides/rewards/overview).

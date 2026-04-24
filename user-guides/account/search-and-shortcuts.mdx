@@ -1,23 +1,26 @@
 ---
 title: "Search and shortcuts"
-description: "Global search entry points and keyboard shortcuts as implemented in the web app."
-last_verified: "2026-04-22"
+description: "Global search and keyboard shortcuts on ip.world."
+last_verified: "2026-04-23"
 ---
 
-## Opening search
+## Open search
 
-Use the search affordance in the app chrome (magnifying glass). The dialog is implemented in `components/search-dialog.tsx` and queries `/api/users/search` for user suggestions alongside token/trend discovery depending on build.
+Click the magnifying glass in the nav, or press **⌘K** (macOS) / **Ctrl+K** (Windows/Linux) from anywhere in the app.
 
-## Keyboard shortcut
+The search dialog covers three indexes at once:
 
-The search input shows the shortcut hint in-product (commonly **⌘K** / **Ctrl+K** style). Follow the hint printed in your build—do not hardcode a different shortcut in support macros without checking.
+- **People** - by username, display name, or wallet address.
+- **Tokens** - by name, ticker, or alias.
+- **Trends** - by name or alias.
 
-## What you can find
+## What to search for
 
-- **Users** by query string (server-backed search),
-- **Tokens and trends** per current Explore wiring.
+- Type a ticker like `$TICKER` to jump to a token.
+- Type a trend name to open the canonical trend page.
+- Type a username or wallet to open a profile.
 
 ## Next
 
-- [Navigating tokens](/user-guides/explore/navigating-tokens)
-- [Explore filters](/user-guides/explore/search-filters-and-sort)
+- Navigating tokens
+- Search, filters, and sort

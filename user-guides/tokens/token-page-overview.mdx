@@ -1,30 +1,29 @@
 ---
 title: "Token page overview"
-description: "Tabs, How it works, and where trade lives on desktop vs mobile."
-last_verified: "2026-04-22"
+description: "The tabs on a token page and how the layout adapts to mobile."
+last_verified: "2026-04-23"
 ---
 
-## Tabs you should know
+The token page is organized around a chart, a Trade panel, and a tab strip below them.
 
-On desktop, the token page uses a tab strip (see `token-data.tsx` in the app) for:
+## Tabs
 
-- **Feed** — social posts for this token.
-- **Holders** — top holders list.
-- **Transactions** — swap history table.
-- **Comments** — threaded discussion.
-- **Treasury** — proposals when governance is active for that context.
+- **Feed** - indexed X and TikTok posts for this token.
+- **Holders** - the top holders list and your holder-reward eligibility.
+- **Transactions** - every swap against the token market.
+- **Comments** - threaded discussion.
+- **Treasury** - proposals and treasury balance for verified trends. See [Treasury and proposals](/user-guides/manage/treasury-and-proposals).
 
 ![Token tab strip figure](/images/token-tabs-desktop.svg)
 
 ## How it works
 
-The lavender **How it works** button opens an in-app explainer modal for economics context—use it when you are unsure where fees flow.
+The **How it works** button on the token header opens an explainer modal that walks through the fee split and reward flows for that specific token. Open it whenever you are unsure where a fee goes.
 
 ## Mobile
 
-On small screens, **Trade** and **Comments** can open as **bottom sheets** so you do not lose chart context—swipe or tap outside to dismiss per mobile patterns in the token layout.
+On small screens, **Trade** and **Comments** open as bottom sheets so the chart stays visible. Swipe down or tap outside the sheet to dismiss.
 
 ## Next
 
-- [Charts and metrics](/user-guides/tokens/charts-and-metrics)
 - [Trading overview](/user-guides/trading/overview)

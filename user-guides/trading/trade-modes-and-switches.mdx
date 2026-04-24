@@ -1,18 +1,19 @@
 ---
 title: "Trade modes and switches"
-description: "Switching pay assets and trade modes in the token trade panel."
-last_verified: "2026-04-22"
+description: "Switching direction and pay assets inside the Trade panel."
+last_verified: "2026-04-23"
 ---
 
-## Modes
+## Direction
 
-The trade panel exposes multiple modes (buy/sell, pay-with selection, and routing toggles) through `trade-switch.tsx` and related state in `trade.tsx`.
+The Trade panel has a **Buy / Sell** toggle at the top. Switching direction flips the input and output fields and updates the slippage and fee estimates.
 
-Use the **in-app labels** as the source of truth—copy them verbatim into support macros when helping users.
+## Pay asset
+
+Below the direction toggle, pick the asset you want to pay with: **IP**, **USDC** (Story or Solana), or **SOL**. When you pick SOL or Solana USDC, the panel shows a Relay quote - the quote includes the bridge hop to Story before the swap executes.
 
 ![Trade modes figure](/images/trade-panel.svg)
 
 ## Next
 
-- [Fees, slippage, and failures](/user-guides/trading/fees-slippage-and-failures)
-- [Charts and metrics](/user-guides/tokens/charts-and-metrics)
+- [Payment methods](/user-guides/trading/payment-methods)

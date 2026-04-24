@@ -1,75 +1,50 @@
 ---
 title: "UGC rewards"
 sidebarTitle: "UGC Rewards"
-description: "How social creators earn from token fee pools — eligibility, indexing, and payouts."
+description: "How social creators earn a cut of trading fees for posts that drive attention to a token."
 last_verified: "2026-04-23"
 ---
 
-## What UGC is **not**
+UGC (user-generated content) rewards pay creators from a share of trading fees when their X or TikTok posts drive attention and volume to a token. UGC earnings are separate from points, referrals, holder rewards, and trend-owner earnings.
 
-- Not the same as **trend owner** fee share.
-- Not the same as **holder rewards** windows.
-- Not the same as **referral points**—separate pipelines.
+## Requirements
 
-## Concept
+You need a linked X or TikTok account to earn UGC rewards:
 
-**UGC (user-generated content)** rewards creators for posting about tokens. Creators earn from **trading fees** when their content drives attention and engagement—separate from leaderboard **points**.
+1. Open **Settings** on your profile.
+2. Connect **X** and verify **TikTok**. One account per platform.
 
-## Connecting socials (requirement)
+## How to make a post count
 
-1. Open **profile / settings**.
-2. Connect **TikTok** and/or **X** (one account per platform; you can disconnect and reconnect).
-3. Linked socials are **required** to become eligible for UGC payouts.
+For a post to be indexed and eligible for scoring, it needs the token reference visible in the post itself:
 
-See [Connect X](/user-guides/account/connecting-x) and [Connect TikTok](/user-guides/account/connecting-tiktok).
+- **X**: include `$TICKER` in the post.
+- **TikTok**: include the token hashtag shown on the token page.
 
-## Posting so posts count
+ip.world indexes matching posts and shows them on the token's feed.
 
-- **X:** include **`$TICKER`** in the post.
-- **TikTok:** include the **token hashtag** pattern the app documents (often tied to canonical naming).
+## Feeds per token
 
-Indexed posts can surface on the token’s **UGC / feed** surfaces.
+Every token page has a **Feed** tab. Filters include creator type, platform, and time window. Sort modes are **Featured** (default, ranks by virality with time decay), **Newest**, **My posts**, and **Most impressions**.
 
-## Feeds (per token)
+## Indexing is not payout
 
-Each token can show a dedicated content feed. Typical **filters** include creator type, platform, and time window. **Sort** modes often include **Featured** (default, driven by a **virality score** that favors traction with time decay), **Newest**, **My posts**, and **Most impressions**.
+Getting indexed means your post shows up in the feed and enters the scoring pool. It does not guarantee a payout. To get paid you also need:
 
-See [Social feeds](/user-guides/explore/social-feeds).
+- A connected X or TikTok account.
+- An active, indexed post inside the scoring window.
+- Posts that pass moderation (no spam, no abuse, no plagiarism).
+- The token is past its bonding-curve graduation.
+- The UGC pool for that token has funds to distribute.
 
-## Indexing vs payout
+## Payouts
 
-**Indexing ≠ payout.** Moderation can remove posts or ban abuse; pools must have budget.
+Payouts run **every Friday at 12:00 PM PDT**. Top creators for each token share that week's UGC pool. Scores blend impressions with referral-driven trading volume, so reach alone is not enough - posts that bring traders earn more.
 
-## Eligibility (checklist)
+Distribution is automatic. Once you qualify, the payout lands in your wallet; there is no separate claim button in the common flow.
 
-- Connected **X** and/or verified **TikTok** on ip.world.
-- Meet **weekly engagement thresholds** shown in live rules.
-- At least one **active indexed** post in the scoring window.
-- Content passes **moderation**.
-
-Eligibility **does not** guarantee a payout.
-
-## Payout cadence and mechanics
-
-Internal product copy targets **weekly** distributions (example: **Friday, 12:00 PM PDT**). Typical gating (confirm in-app banners):
-
-- Token is **bonded** (post–bonding-curve milestone),
-- At least one **eligible creator**,
-- UGC pool has **funds**.
-
-Scoring highlights from Gitbook copy:
-
-- **Top creators** (example cap: **top 100**) share the weekly allocation.
-- Score weights **impressions** plus **referral-driven volume**.
-- Fee allocation examples: **12.5%** of **`IP`** fees and **25%** of **token** fees routed to creator pools (see [Tokenomics and fees](/user-guides/rewards/tokenomics-and-fees)—engineering files may refine exact numerics).
-
-Distribution is **automatic** in product messaging (no manual “claim” step where the app handles it end-to-end—still verify the live token page).
-
-## Engineering detail
-
-Engagement and referral-driven volume both feed scoring simulators in `dashboard/docs/FEE_FORMULAS.md`.
+The UGC pool for a token is funded from trading fees on that token.
 
 ## Next
 
-- [Connect TikTok](/user-guides/account/connecting-tiktok)
 - [Holder rewards](/user-guides/rewards/holder-rewards)

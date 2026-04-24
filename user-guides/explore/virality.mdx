@@ -1,18 +1,35 @@
 ---
 title: "Virality"
-description: "What virality signals mean in Explore—read the UI, do not assume hidden formulas."
-last_verified: "2026-04-22"
+description: "How ip.world ranks attention on trends and tokens."
+last_verified: "2026-04-23"
 ---
 
-## What to trust
+Virality is ip.world's attention score. It blends social engagement, trading activity, and time decay into a single 0–100 number that ranks trends and tokens in Explore and powers the **Featured** sort in social feeds.
 
-Virality displays are meant to summarize **attention** on a trend or token. The **exact score** may combine multiple backend inputs; unless a number is explicitly labeled as a formula in the UI, treat it as a **ranking hint**, not an oracle.
+## How to read it
 
-## Historical note for points hunters
+Virality is a **ranking signal**, not a fundamental metric. A high score means the trend or token is pulling attention right now - it does not predict price.
 
-Backend documentation notes that **scheduled virality point awards** are deprecated even though historical rows may still exist. Do not expect new virality **points** from that legacy path—focus on current **Leaderboard** categories instead.
+Scores decay over time, so a viral moment from last month no longer drags today's ranking up. Sustained attention requires sustained activity.
+
+## Tiers
+
+Virality ties into leaderboard rewards through four tiers:
+
+| Tier | Score range |
+|---|---|
+| Tier 1 | 90–100 |
+| Tier 2 | 75–89 |
+| Tier 3 | 50–74 |
+| Tier 4 | 25–49 |
+
+Verified trends earn the full tier reward. Unverified trends earn a small fraction at tiers 1 and 2, and zero at tiers 3 and 4 - verification is what unlocks the full virality payout.
+
+## Legacy note
+
+Scheduled virality point awards from older releases are deprecated. Historical rows may still exist in the backend, but no new points flow through that path. Use the current Leaderboard categories instead.
 
 ## Next
 
-- [Points and leaderboard](/user-guides/rewards/points-and-leaderboard)
-- [Search and filters](/user-guides/explore/search-filters-and-sort)
+- Points and leaderboard
+- Search, filters, and sort

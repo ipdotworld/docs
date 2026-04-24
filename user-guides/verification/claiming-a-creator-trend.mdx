@@ -1,53 +1,54 @@
 ---
 title: "Claiming a creator trend"
-description: "Standard and advanced IPA claim paths once a creator trend is READY FOR CLAIM."
-last_verified: "2026-04-22"
+description: "How the verified owner claims a creator trend after approval."
+last_verified: "2026-04-23"
 ---
 
-## When you can claim
+Once moderators approve your verification request, the trend page shows **READY FOR CLAIM**. Claiming the trend registers ownership on-chain and activates your fee share, vested allocation, and owner dashboard.
 
-The trend page shows **READY FOR CLAIM** when moderators approve the umbrella and the owner may begin the claim dialog.
+## What claiming does
 
-## Why claim?
+Claiming a trend:
 
-The in-app claim dialog lists owner benefits such as **licensed** status under the **ITL**, fee participation, and growth tooling—read the live dialog for the exact strings shipped in your build.
+- Issues the **IP Token License (ITL)** between you and the trend.
+- Activates the **owner fee share** on every token under the trend.
+- Starts the **3% vested allocation** on every token under the trend, released linearly over 3 months.
+- Unlocks the **owner dashboard** for harvesting, endorsements, and treasury actions.
 
-See [IP Token License (ITL)](/user-guides/verification/ip-token-license-itl).
+## Path A - Standard claim
 
-## Path A — Standard claim
+Use this path if you do not already have a Story IP Account (IPA) for this IP.
 
 <Steps>
-  <Step title="Connect socials">
-    In **Settings**, connect **X** or complete **TikTok** verification so identity can match the owner link.
+  <Step title="Connect socials in Settings">
+    In **Settings**, confirm your X or TikTok connection matches the owner link on the trend. The claim flow compares these before it lets you proceed.
   </Step>
   <Step title="Open the trend page">
-    Visit the creator trend that shows **READY FOR CLAIM**.
+    Go to the creator trend that shows **READY FOR CLAIM**.
   </Step>
-  <Step title="Claim ownership">
-    Click **Claim Ownership** and follow prompts, including wallet transactions that register the Story-side IP account when applicable.
+  <Step title="Click Claim Ownership">
+    Follow the in-app prompts. The flow registers the Story IPA for you and issues the ITL in the same transaction.
+  </Step>
+  <Step title="Confirm wallet prompts">
+    Sign each wallet prompt. When the last transaction lands, the trend flips to verified and your dashboard activates.
   </Step>
 </Steps>
 
-## Path B — Existing Story IPA (advanced)
+## Path B - Connect an existing Story IPA
 
-If you already have a Story **IP Account (IPA)**:
+Use this path if you already own a Story IP Account (IPA) for this IP.
 
 <Steps>
-  <Step title="Open claim dialog">
-    Click **Claim Ownership**.
+  <Step title="Open Claim Ownership">
+    Click **Claim Ownership** from the trend page.
   </Step>
-  <Step title="Choose existing IPA">
-    Use **Already have an IPA registered? Connect here** (wording per UI).
+  <Step title="Choose Connect existing IPA">
+    Pick the option to connect an existing IPA instead of registering a new one.
   </Step>
-  <Step title="Paste IPA address">
-    The app verifies that your connected wallet owns the underlying IP account NFT.
+  <Step title="Paste the IPA address">
+    The app verifies that your connected wallet owns the IP Account NFT for the address you paste.
   </Step>
-  <Step title="Finish claim">
-    Confirm **Claim** when validation succeeds.
+  <Step title="Confirm the claim">
+    Sign the wallet prompt to complete the claim.
   </Step>
 </Steps>
-
-## Next
-
-- [Trend owner dashboard](/user-guides/manage/trend-owner-dashboard)
-- [Endorsements](/user-guides/manage/endorsements)

@@ -1,26 +1,30 @@
 ---
 title: "Comments"
-description: "Posting and replying on token pages — auth requirements and errors."
-last_verified: "2026-04-22"
+description: "Posting and replying on token pages - auth, threading, and error states."
+last_verified: "2026-04-23"
 ---
 
-## Who can post
+Every token has a **Comments** tab for threaded discussion between traders, holders, and creators.
 
-You must be **signed in** and have an active **wallet address** for the app to accept a comment. If you are not connected, the UI shows:
+## Posting
+
+You need to be signed in with an active wallet to comment. If you are not connected, the composer shows:
 
 > **Please connect your wallet before submitting a comment**
 
+Sign in and try again.
+
 ## Replies
 
-Threading is supported—open a thread to reply. Optimistic UI may show your message immediately, then reconcile with server state.
+Click any comment to open its thread and post a reply. The UI shows your message immediately (optimistic), then reconciles with server state once the write lands.
 
 ![Comments tab figure](/images/token-comments.svg)
 
-## Empty thread
+## Empty state
 
-When no messages exist yet, the list shows **No comments yet**.
+**No comments yet** shows until the first comment is posted.
 
 ## Next
 
-- [Reporting](/user-guides/safety/reporting)
-- [Social feeds](/user-guides/explore/social-feeds)
+- Reporting
+- Social feeds

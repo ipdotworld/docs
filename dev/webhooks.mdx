@@ -1,25 +1,24 @@
 ---
 title: "Webhooks"
-description: "Inbound webhook integrations for ip.world."
-last_verified: "2026-04-22"
+description: "Webhook integrations for ip.world - public and internal surfaces."
+last_verified: "2026-04-23"
 ---
 
-## Public developer webhooks
+## Public webhook surface
 
-There is **no** stable, documented third-party webhook surface exposed from the `ip.world` Next.js app for general integrators as of this writing.
+ip.world does not expose a public webhook surface for third-party integrators. The Next.js app at `ip.world` only serves inbound web requests; it does not emit public event webhooks.
 
-## Internal systems
+If you need an integration, open a request in [Discord](https://discord.gg/ipworld) with:
 
-Background workers in the **Go API** (`base`) may consume provider webhooks (payments, social providers, etc.). Those endpoints live on private infrastructure and require operator credentials.
+- The event you want to subscribe to (deposits, trades, verifications, UGC payouts).
+- Your expected payload schema.
+- Your signing-secret rotation plan.
 
-## If you need an integration
+## Internal webhook consumers
 
-Contact the ip.world team via [Discord](https://discord.gg/ipworld) with:
-
-- the event you want (deposits, trades, verification),
-- your signing secret rotation plan,
-- expected payload schema.
+The Go API in the `base` service consumes inbound webhooks from payment and social providers. Those endpoints run on private infrastructure and require operator credentials - they are not available to third-party integrators.
 
 ## Next
 
 - [Authentication](/dev/authentication)
+- [API routes](/dev/api)

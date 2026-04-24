@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "ip.world",
-  "description": "User and developer documentation for ip.world — trends, tokens, trading, rewards, and integrations.",
+  "description": "User documentation for ip.world - trends, tokens, trading, rewards, and safety.",
   "colors": {
     "primary": "#AD74FE",
     "light": "#C093FF",
@@ -19,24 +19,7 @@
     "default": "dark"
   },
   "favicon": "/favicon.svg",
-  "icons": {
-    "library": "lucide"
-  },
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "FAQ",
-          "icon": "help-circle",
-          "href": "/user-guides/reference/faq"
-        },
-        {
-          "anchor": "Safety",
-          "icon": "shield",
-          "href": "/user-guides/safety/reporting"
-        }
-      ]
-    },
     "tabs": [
       {
         "tab": "User guide",
@@ -48,7 +31,7 @@
           {
             "group": "CORE CONCEPTS",
             "pages": [
-              "user-guides/trends-and-tokens",
+              "user-guides/coin-types",
               "user-guides/trading/payment-methods",
               "user-guides/rewards/holder-rewards",
               "user-guides/rewards/ugc-program",
@@ -62,34 +45,28 @@
             "pages": [
               "user-guides/trading/overview",
               "user-guides/how-to/launch-a-coin",
-              "user-guides/how-to/earn-holder-rewards",
               "user-guides/how-to/earn-ugc-rewards",
+              "user-guides/how-to/earn-holder-rewards",
               "user-guides/how-to/verify-a-coin"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Developers",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": ["dev/index"]
-          },
-          {
-            "group": "Platform",
-            "pages": ["dev/authentication", "dev/api", "dev/webhooks"]
           }
         ]
       }
     ]
   },
   "redirects": [
-    { "source": "/user-guides/ips-and-tokens", "destination": "/user-guides/trends-and-tokens" },
-    { "source": "/user-guides/app-tour", "destination": "/user-guides/platform-map" },
+    { "source": "/dev", "destination": "/" },
+    { "source": "/dev/", "destination": "/" },
+    { "source": "/dev/index", "destination": "/" },
+    { "source": "/dev/authentication", "destination": "/" },
+    { "source": "/dev/api", "destination": "/" },
+    { "source": "/dev/webhooks", "destination": "/" },
+    { "source": "/user-guides/ips-and-tokens", "destination": "/user-guides/coin-types" },
+    { "source": "/user-guides/trends-and-tokens", "destination": "/user-guides/coin-types" },
+    { "source": "/user-guides/app-tour", "destination": "/" },
     { "source": "/user-guides/account/login-and-wallets", "destination": "/user-guides/account/sign-in-methods" },
     { "source": "/user-guides/account/connecting-socials", "destination": "/user-guides/account/connecting-x" },
-    { "source": "/user-guides/explore/navigating-ips", "destination": "/user-guides/explore/navigating-trends" },
+    { "source": "/user-guides/explore/navigating-ips", "destination": "/user-guides/getting-started" },
     { "source": "/user-guides/explore/feeds", "destination": "/user-guides/explore/social-feeds" },
     { "source": "/user-guides/explore/search-and-filters", "destination": "/user-guides/explore/search-filters-and-sort" },
     { "source": "/user-guides/explore/virality-score", "destination": "/user-guides/explore/virality" },

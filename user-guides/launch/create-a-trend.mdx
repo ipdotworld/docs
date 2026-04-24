@@ -1,54 +1,53 @@
 ---
 title: "Create a trend"
-description: "Launch a new umbrella trend — when to do it, ownership types, and duplicate warnings."
+description: "Launch a new trend on ip.world - when to do it, ownership types, and duplicate handling."
 last_verified: "2026-04-23"
 ---
 
 ## Before you create
 
 <Warning>
-  If a **very similar trend** already exists, do **not** create another umbrella. **Launch a token** under the existing trend instead: [Launch a token](/user-guides/launch/create-a-token).
+  If a trend already exists for the idea you have in mind, do **not** create a new one. Launch a token under the existing trend instead.
 </Warning>
 
-The app warns about duplicates during registration; moderators may later merge duplicates.
+As you type a trend name, ip.world searches for fuzzy matches and surfaces existing trends in a dropdown. If your trend is a duplicate of an existing one, moderators will merge it later and move any tokens you created under the canonical trend.
 
 ![Create trend figure](/images/create-trend.svg)
 
 ## Ownership types
 
-- **Creator trend** — tied to a clear owner (person, brand, project). Owner link (X or TikTok) helps verification. Launching a token is **optional**.
-- **Community trend** — bottoms-up movement. Launching a token is **required** at creation time.
+ip.world has two ownership models for trends:
 
-See [Creator vs community trends](/user-guides/verification/creator-vs-community-trends).
+- **Creator trend** - the trend has a clear real-world owner (a person, a brand, a project). The owner links an X or TikTok account as a verification anchor. Launching a token at creation time is optional.
+- **Community trend** - a bottom-up movement owned collectively by its holders. Launching a token at creation time is required.
 
 ## Steps
 
 <Steps>
-  <Step title="Open Create trend">
-    In the app, go to **Create → Create trend** (wording may show legacy **IP** in UI until fully renamed—same flow).
+  <Step title="Open Create">
+    From the nav, click **Create**.
   </Step>
-  <Step title="Identity">
-    Add **image**, **canonical name**, and **aliases** so search catches real spellings.
+  <Step title="Enter trend identity">
+    Add an image, the canonical name, and aliases. Aliases help search catch alternate spellings and prevent duplicate trends.
+  </Step>
+  <Step title="Pick a category">
+    Pick the category that best describes the trend: Pet, Person, Trend, Game, Technology, Meme, Movement, Brand, Character, Art, or Misc. The category also gates which verification tracks are available later.
   </Step>
   <Step title="Pick ownership type">
-    **Creator** vs **Community** controls whether token launch is optional.
+    Choose **Creator** or **Community**. Creator trends can launch without a token; community trends require a token at creation.
   </Step>
-  <Step title="Category, description, socials">
-    Choose a **category** (examples from product messaging: **Character**, **Meme**, **Trend**, **Game**, **Other**—the live picker may show more). Add enough **description** and **socials** that traders are not guessing.
-  </Step>
-  <Step title="Launch token (optional vs required)">
-    **Community** forces token launch on. **Creator** can toggle.
+  <Step title="Add description and socials">
+    Fill in a description and the relevant social links (X, TikTok, Instagram, Telegram, website). Traders use these to judge whether the trend is legitimate.
   </Step>
   <Step title="Confirm">
-    Submit and complete wallet prompts when launching a token in the same flow.
+    Submit. If you are launching a token in the same flow, complete the wallet prompt.
   </Step>
 </Steps>
 
 ## Launch fees
 
-Token launches charge **`IP`** as shown in the create UI (commonly **10 IP** for spam deterrence—confirm the exact number in-product before you confirm a transaction).
+The launch fee is **30 IP**, charged on top of the initial buy amount you select. The fee exists to deter spam and bot-launched trends.
 
-## Next
-
-- [Launch a token](/user-guides/launch/create-a-token)
-- [Metadata, socials, and anti-snipe](/user-guides/launch/metadata-socials-and-antisnipe)
+<Note>
+  The launch fee is set by the protocol and can change. The exact amount is always shown in the wallet prompt before you sign - read it before confirming.
+</Note>

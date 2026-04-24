@@ -1,50 +1,40 @@
 ---
 title: "Community governance"
-description: "Token-holder proposals, canonical voting tokens, and pass thresholds."
+description: "Proposals, voting, and the pass rule for community-owned trends."
 last_verified: "2026-04-23"
 ---
 
-## Model
+Community trends are governed by their holders. Governance has three parts:
 
-**Community trends** are coordinated by token holders.
+- A **canonical voting token** - the first token launched under the trend. Holding this token is what gives you voting rights.
+- **Snapshot** - the proposal and voting surface, embedded into the ip.world UI.
+- **Gnosis Safe** - the multisig that executes proposals once they pass.
 
-Governance is built around:
+## Who can vote and propose
 
-- a **canonical voting token** (the **first token** created for that umbrella),
-- **Snapshot** proposals and voting surfaced in the ip.world UI,
-- **execution** via **Gnosis Safe** (or compatible multisig) after proposals pass—follow in-app links to the live Safe address.
-
-## Access control
-
-Creating proposals or voting may require holding the **canonical voting token** in the wallet you connected for governance actions.
+You need to hold the canonical voting token in your connected wallet. Voting power is weighted by balance.
 
 ## What you can do
 
-- **Vote** — For / Against / Abstain.
-- **Create proposals** — when eligible.
-- **Treasury moves** — spending proposals that pull vested rewards or route funds per approved text.
+- **Vote** - For, Against, or Abstain on open proposals.
+- **Create proposals** - submit spending, parameter, or policy proposals once you pass the proposal threshold.
+- **Execute** - after a proposal passes, the multisig signers execute the on-chain action.
 
 ![Treasury proposals figure](/images/token-treasury.svg)
 
 ## Pass rule
 
-Plain English: proposals need **more YES than NO** *and* YES must clear an opposition-aware threshold.
+A proposal passes when:
 
-Formal rule:
+1. **YES > NO**, and
+2. **YES ≥ REQUIRED_YES**, where **REQUIRED_YES = 10% + NO** (base 10% + one vote of YES for every vote of NO).
 
-- **YES > NO**
-- **YES ≥ REQUIRED_YES**
-- **REQUIRED_YES = B + k × NO** with **B = 10%** and **k = 1**
+In plain English: controversial proposals need a disproportionately large YES to pass. A proposal with 5% NO only needs 15% YES; a proposal with 20% NO needs 30% YES.
 
 <Tip>
-  Controversial proposals (large NO) require disproportionately large YES to pass—by design.
+  The pass rule is designed so close or contested votes do not scrape through on low turnout.
 </Tip>
-
-## Shielded voting
-
-If Snapshot is configured for shielded voting, the UI may note that you will not see your explicit choice echoed in-app.
 
 ## Next
 
 - [Treasury and proposals](/user-guides/manage/treasury-and-proposals)
-- [After verification](/user-guides/verification/after-verification)

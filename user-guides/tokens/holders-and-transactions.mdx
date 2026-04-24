@@ -1,18 +1,28 @@
 ---
 title: "Holders and transactions"
 description: "Reading the Holders and Transactions tabs on a token page."
-last_verified: "2026-04-22"
+last_verified: "2026-04-23"
 ---
 
 ## Holders tab
 
-Shows **top holders** with addresses (and usernames when resolved). Empty state copy in-app: **There aren't any holders right now** when metrics have not populated.
+The Holders tab shows every wallet that holds the token, ordered by balance. Each row shows the address (or username if resolved), balance, percent of supply, and PnL where available.
+
+For tokens past graduation, the tab also shows:
+
+- The current **holder reward pool** for the next distribution.
+- The **window timer** until the next airdrop.
+- Your **eligible balance** and **projected share**.
+
+See [Holder rewards](/user-guides/rewards/holder-rewards).
 
 ![Holders tab figure](/images/token-holders.svg)
 
+Empty state: **There aren't any holders right now** displays when the token has no holders yet.
+
 ## Transactions tab
 
-Lists swaps relevant to the token; the table is backed by the same swap feeds used for PnL helpers in the app (`swap-table`, `use-swaps-pnl`).
+The Transactions tab lists every swap against the token market - buy and sell, with wallet, size, price, and timestamp. The same transaction set powers the per-token PnL calculation on your profile.
 
 ![Transactions tab figure](/images/token-transactions.svg)
 

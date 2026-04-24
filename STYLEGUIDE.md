@@ -42,7 +42,7 @@ Docs site styling is controlled via [docs.json](docs.json) and [style.css](style
 
 ## Typography
 
-The web app uses **Archivo** and **Geist** in places. Mintlify may not load custom fonts; if previews look off, keep copy tight and rely on Mint defaults—do not block shipping on font parity.
+The web app uses **Archivo** and **Geist** in places. Mintlify may not load custom fonts; if previews look off, keep copy tight and rely on Mint defaults-do not block shipping on font parity.
 
 ## Frontmatter (every published MDX page)
 

@@ -1,52 +1,30 @@
 ---
 title: "Sign-in methods"
-description: "How you authenticate to ip.world — social, email, and wallets — and what it unlocks."
+description: "How you authenticate to ip.world and what signing in unlocks."
 last_verified: "2026-04-23"
 ---
 
-## What signing in does
+Signing in to ip.world unlocks trading, commenting, governance voting, trend verification, and points tied to your profile. Authentication is handled by Dynamic.
 
-Signing in lets you **trade from embedded wallets**, **comment**, **govern** (when you hold voting tokens), **claim** verified trend ownership, and **earn** points tied to your profile.
+## Supported sign-in methods
 
-## Supported sign-in types
-
-Product copy groups the main paths as:
-
-- **X (Twitter)** — OAuth
-- **Google** — OAuth
-- **Email** — magic link or password (per Dynamic configuration)
-- **MetaMask** — external EVM wallet
-- **Phantom** — external Solana wallet
-
-Other wallets may appear in the same wallet list depending on Dynamic settings (for example **Rabby**).
-
-## Order of options in the modal
-
-The Dynamic modal is typically ordered as:
-
-1. **Social** providers (one row).
-2. **Or** separator.
-3. **Email** sign-in.
-4. **Or** separator.
-5. **Wallet** list (external wallets).
+- **X (Twitter)** - OAuth
+- **Google** - OAuth
+- **Email** - magic link
+- **Web3 wallet** - EVM or Solana wallet
 
 ## Embedded wallets on first login
 
-On first successful login, the app provisions **embedded wallets** with both **Solana** and **EVM (Story)** addresses. No separate wallet install is required to start—see [Embedded wallets](/user-guides/account/embedded-wallets).
+On first successful login, ip.world provisions two embedded wallets - one on **Story** (EVM) and one on **Solana**. You do not need to have an external wallet to start trading.
 
 ![Sign-in order overview](/images/auth-sign-in-order.svg)
 
 ## After you connect
 
-You should see yourself as **logged in** in the chrome of the app and be able to open **Profile** and **Settings**.
+The nav shows you as logged in. Open **Profile** and **Settings** from the account menu to set your username, link socials, and view your stats.
 
 ![Connected session overview](/images/auth-connected.svg)
 
 ## Sign out and switch accounts
 
-Use the account menu in the app to **disconnect**. If you need a different wallet, disconnect first—avoid “wrong wallet” errors on transactions.
-
-## Next
-
-- [Embedded wallets](/user-guides/account/embedded-wallets)
-- [Profile and stats](/user-guides/account/profile-and-stats)
+Use the account menu to disconnect. Always disconnect before connecting a different wallet - leaving a stale session attached causes "wrong wallet" errors on transactions.

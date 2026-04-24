@@ -1,57 +1,45 @@
 ---
 title: "Tokenomics and fees"
-description: "High-level map of trading fees, pools, graduation, and who gets paid."
+description: "How trading fees split, what a bonding curve is, and what graduation means on ip.world."
 last_verified: "2026-04-23"
 ---
 
-## Why this page exists
+Every trade on ip.world pays a swap fee. The fee funds the five destinations below. This page explains the default split.
 
-Traders care **why** price moves; builders care **where** fees route. This page stays qualitative; deep formulas live in engineering references.
-
-## Fee distribution (product summary)
-
-High-level **destination** split from internal Gitbook / product copy:
+## Fee distribution
 
 | Destination | Share |
 | --- | ---: |
-| Community / treasury | 45% |
+| Community treasury | 45% |
 | Protocol | 25% |
-| Creators (UGC) | 15% |
+| UGC creators | 15% |
 | Liquidity | 12.5% |
 | Referrals | 2.5% |
 
-Plain language:
+What each destination funds:
 
-- **Community / treasury** — token-controlled funds governed by owners or holders.
-- **Creators (UGC)** — weekly-style creator payouts from trading activity (see [UGC rewards](/user-guides/rewards/ugc-program)).
-- **Liquidity** — routed to pools and market structure.
-- **Protocol** — platform operations and sustainability.
-- **Referrals** — growth incentives ([Referral program](/user-guides/rewards/referrals)).
+- **Community treasury** - token-controlled funds governed by the trend owner or, for community trends, by holders. See [Treasury and proposals](/user-guides/manage/treasury-and-proposals).
+- **Protocol** - platform operations, development, and infrastructure.
+- **UGC creators** - the pool that pays the weekly UGC Friday distribution. See [UGC rewards](/user-guides/rewards/ugc-program).
+- **Liquidity** - re-added to the pool to deepen the market.
+- **Referrals** - pays signup referrers (5% of the protocol share) and trend-owner referrers (2.5% of the protocol share).
 
-<Tip>
-  Exact routing can depend on **verification state** and **token type**—treat the table as the default mental model, not a per-tx debugger.
-</Tip>
+Holder rewards come out of the swap fee on a per-token basis: **30% of the token-side fee** and **50% of the IP-side fee** go to holders. See [Holder rewards](/user-guides/rewards/holder-rewards).
 
-## Engineering references (advanced)
+## Bonding curves
 
-- `dashboard/docs/FEE_FORMULAS.md` — LP splits, holder scoring, UGC scoring.
-- `base/docs/REWARD_SYSTEM_TECHNICAL.md` — indexer tables, UGC vs holder pool wiring.
+Every token launches on a **bonding curve**: price moves deterministically with demand, and early buyers pay less than later buyers. The token's bonding-curve progress is visible on the token page as a progress bar.
 
 ## Graduation
 
-Tokens **graduate** from bonding curves into richer liquidity configurations; the **exact market cap target** is **config / UI specific**. Read the **Graduation** meter on the token page rather than third-party summaries.
+When the bonding curve fills, the token **graduates** from the curve into a deeper, Uniswap-style liquidity pool. After graduation, price is set by AMM trading, not by the curve.
 
-## Bonding curve (trader view)
+Graduation is also the point at which most reward programs turn on - UGC payouts and holder rewards both require the token to be past graduation.
 
-New tokens launch on a **bonding curve**: price moves with demand, and a **bonding progress** indicator shows how far the market is from being fully bonded. Once complete, the token is **fully bonded** in the sense shown in UI.
+## Trend-owner allocation
 
-## Who gets paid (conceptual)
-
-- **Traders** pay swap fees like any DEX market.
-- **Pools** split portions toward **holders**, **UGC creators**, **treasury / community**, and **verified owners** depending on token type and verification state.
-- **Points** are an **app-layer** ledger for quests and seasons—do not conflate them with on-chain fee splits.
+Verified trend owners receive **3% of the supply** of every token under their trend, vested linearly over **3 months**. This allocation vests to the owner's wallet after verification completes.
 
 ## Next
 
 - [Rewards overview](/user-guides/rewards/overview)
-- [After verification](/user-guides/verification/after-verification)

@@ -1,10 +1,10 @@
 # Documentation changelog
 
-## 2026-04-23 — Gitbook Copy (Notion) sync
+## 2026-04-23 - Gitbook Copy (Notion) sync
 
 - Aligned user-guide copy with internal **Gitbook Copy** page in Notion (via Notion MCP): **culture markets** positioning, sign-in providers, deposits, token creation steps, anti-snipe numbers, fee distribution table, UGC feeds/eligibility/payouts, treasury proposal types, **Gnosis Safe** execution, referral fee-share lines, holder/profile/tier wording, trading surfaces, and FAQ answers (no TBD placeholders).
 
-## 2026-04-22 — Trend-first rebuild
+## 2026-04-22 - Trend-first rebuild
 
 - Renamed user-facing vocabulary from **IP** to **trend** across user guides (legal pages still reference ITL/IPA).
 - Reorganized Mintlify navigation into **Start → Account → Discover → Token page → Trading → Launch → Verification → Owners → Rewards → Safety → Reference**.

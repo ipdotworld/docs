@@ -1,14 +1,12 @@
 ---
 title: "Launch a token"
-description: "Create a new market under an existing trend."
+description: "Create a new token market under an existing trend."
 last_verified: "2026-04-23"
 ---
 
 ## When to use this flow
 
-Use **Launch token** when the **trend (umbrella idea) already exists** and you are adding another tradable market under it. If no umbrella exists yet, start with [Create a trend](/user-guides/launch/create-a-trend) instead.
-
-See [Trends and tokens](/user-guides/trends-and-tokens).
+Use **Launch token** when the trend already exists and you are adding another tradable market under it. If the trend does not exist yet, create the trend first in the app — you can launch the token in the same flow.
 
 ![Create token figure](/images/create-token.svg)
 
@@ -16,32 +14,32 @@ See [Trends and tokens](/user-guides/trends-and-tokens).
 
 <Steps>
   <Step title="Open Create">
-    Click **Create**, then choose the flow for a **new token** under an existing trend (**Create token**; UI may still say **remix** in places).
+    Click **Create** in the nav.
   </Step>
-  <Step title="Link the umbrella">
-    Search and select the **existing trend** you are launching under (the shared “idea” page for that culture).
+  <Step title="Pick the trend">
+    Type the trend name. ip.world suggests existing trends as you type - pick the right one. Launching a new token under an existing trend keeps fees and ownership routed to the real owner.
   </Step>
   <Step title="Token identity">
-    Enter **name**, **ticker** (`$TICKER`), **description**, and **image**; add **token socials** (includes **Telegram** where exposed).
+    Enter the **name**, **ticker** (`$TICKER`), **description**, and **image**. Add the token socials: X, Instagram, TikTok, Telegram, and a website.
   </Step>
-  <Step title="Category">
-    Pick the category that best matches the culture type—[Metadata, socials, and anti-snipe](/user-guides/launch/metadata-socials-and-antisnipe#category).
-  </Step>
-  <Step title="Launch options">
-    Confirm any **Creator** vs **Community** or other toggles the form shows for this deployment (some builds inherit the parent trend’s model—follow the live screen).
+  <Step title="Pick a category">
+    Pick the category that fits the trend - Pet, Person, Trend, Game, Technology, Meme, Movement, Brand, Character, Art, or Misc.
   </Step>
   <Step title="Anti-snipe (optional)">
-    Toggle early wallet caps—[Anti-snipe](/user-guides/launch/metadata-socials-and-antisnipe#anti-snipe).
+    Toggle anti-snipe to cap each external wallet at **2% of supply for the first 5 minutes** after launch.
   </Step>
-  <Step title="Initial purchase">
-    Select creator opening buy in **`IP`** (roughly **0.1%–3%** of supply where the UI allows—confirm the slider).
+  <Step title="Set your initial buy">
+    Enter how much you want to buy of your own token at launch. You can enter any amount denominated in IP, SOL, or USDC - the preset buttons (0.25%, 0.5%, 1%, 2%, 3% of supply) are shortcuts.
   </Step>
-  <Step title="Pay launch fee and confirm">
-    Launches commonly charge **10 `IP`** as an anti-spam cost—confirm the exact number and recipient in the wallet prompt. Submit; the token should be **live and tradeable** once the transaction lands.
+  <Step title="Pay the launch fee and confirm">
+    The launch fee is **30 IP**, added on top of your initial buy. Submit the transaction; your token is live and tradable as soon as the transaction lands.
   </Step>
 </Steps>
 
+<Note>
+  The launch fee is protocol-set and can change. The wallet prompt always shows the exact charge before you sign.
+</Note>
+
 ## Next
 
-- [Metadata, socials, and anti-snipe](/user-guides/launch/metadata-socials-and-antisnipe)
 - [Trading overview](/user-guides/trading/overview)

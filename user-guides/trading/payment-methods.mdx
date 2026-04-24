@@ -1,34 +1,32 @@
 ---
 title: "Payment methods"
 sidebarTitle: "Trading"
-description: "IP, USDC on Story, and Solana SOL/USDC via Relay — as wired in config/relay-chains.ts and trade."
+description: "The assets you can pay with on ip.world and how Solana funds get to Story."
 last_verified: "2026-04-23"
 ---
 
-## Story-native
+ip.world trades settle on Story. You can pay with three assets: **IP**, **USDC**, and **SOL**.
 
-- **IP** — native Story gas and pay asset.
-- **USDC (Story)** — ERC-20 on Story at `STORY_USDC_ADDRESS` in `config/relay-chains.ts`.
+## Story (direct)
 
-## Solana via Relay
+- **IP** - the native gas token on Story and the default pay asset for token trades.
+- **USDC on Story** - settles directly on Story; no bridge needed.
 
-Relay supports Solana funding routes using Relay’s Solana chain id **`792703809`** (`RELAY_SOLANA_CHAIN_ID`):
+## Solana (through Relay)
 
-- **SOL** — `SOLANA_NATIVE_SOL_ADDRESS` (`11111111111111111111111111111111`).
-- **USDC** — SPL mint `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`.
+- **SOL** - paid from your Solana embedded wallet. ip.world bridges your SOL to Story through Relay and then executes the swap.
+- **USDC on Solana** - same path as SOL; bridged to Story through Relay before the swap.
 
-Your **Solana embedded wallet** receives bridged funds when withdrawing Story IP to SOL via `relayStoryIpToSolana`.
+When you pay with SOL or Solana USDC, the trade panel shows a Relay estimate before you sign. The actual amount you receive on Story can shift slightly between quote and execution because of market movement during the bridge - size accordingly.
 
-## Chains
+## Where bridged funds land
 
-- **Story mainnet chain id** — **`1514`** (`RELAY_STORY_CHAIN_ID`).
+If you sell a Story-native position into SOL, the SOL lands in your **Solana embedded wallet**. Manage it from the wallet menu in the app.
 
-## What is not implied
+## Networks
 
-Other EVM chains may appear in curated Relay chain lists for future or partial support—**only document pay assets that the trade UI actually exposes** in your build.
+ip.world uses two networks: **Story** for token markets and verification, and **Solana** for SOL and SPL-USDC routing. No other chains are supported inside the app.
 
 ## Next
 
-- [Fee breakdown (editable %)](/user-guides/trading/fees-slippage-and-failures#fee-breakdown)
-- [Trade modes and switches](/user-guides/trading/trade-modes-and-switches)
-- [Embedded wallets](/user-guides/account/embedded-wallets)
+- [Trade Coins](/user-guides/trading/overview)
