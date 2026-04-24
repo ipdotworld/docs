@@ -1,23 +1,74 @@
 ---
 title: "Coin types"
 sidebarTitle: "Coin Types"
-description: "Creator-type and community-type tokens - the two kinds of markets on ip.world."
+description: "Creator-type and community-type tokens — the two kinds of markets on ip.world."
 last_verified: "2026-04-23"
 ---
 
-## Creator-type tokens
+Every market on ip.world starts with a **Trend** — the canonical page for an idea, a meme, a brand, a movement. Each Trend can have one or more **Tokens** underneath it. The Trend's **type** determines how fees are routed, who controls what, and how verification works. All tokens under the same Trend share the same type.
 
-Markets tied to a **single creator or brand** identity. Ownership, verification, and fee routing follow the **creator** path in the app when that flow is active.
+There are two types: **Creator** and **Community**.
 
-## Community-type tokens
+## Creator-type
 
-Markets where **holders** share direction-treasury and governance follow the **community** model in the app.
+For cultural phenomena tied to a **specific person, brand, or source**. Think: a YouTuber, a character, an artist, a brand account.
 
-## Choosing in the app
+- A verified **owner** receives a direct cut of trading fees (the IP Owner share).
+- The owner gets a crown badge, a vested allocation, and control over their Trend page.
+- Verification requires proving you are the creator or an authorized representative.
 
-When you launch, pick the type that matches how the market should be run. Labels and options in the **create** flow are the source of truth if this page and the UI ever differ.
+## Community-type
 
-## Next
+For **emergent, community-driven** culture. Think: a meme with no single origin, a movement, a collective bit.
 
-- [Trading](/user-guides/trading/payment-methods)
-- [Verification](/user-guides/verification/verification-overview)
+- There is no single owner. The IP Owner fee share flows into the **community treasury** instead.
+- The treasury unlocks when the token **graduates** — a bonding curve milestone.
+- Holders vote on how treasury funds are spent.
+- Verification roles are `community_lead` or `community_member`.
+
+## Fee distribution
+
+The fee split is the same structure for both types. Every token's LP holds two assets — **\$IP** and the **meme token** — and each side splits differently.
+
+<CardGroup cols={2}>
+  <Card title="$IP side" icon="coins">
+    - **50%** → Protocol
+    - **25%** → LP Re-Add
+    - **10%** → IP Owner
+    - **10%** → UGC Creators
+    - **5%** → Referrer
+  </Card>
+  <Card title="Meme side" icon="fire-flame-curved">
+    - **60%** → Community Treasury
+    - **30%** → Token Holders
+    - **10%** → UGC Creators
+  </Card>
+</CardGroup>
+
+<Tip>
+  The only difference: on **creator-type** tokens, the 10% IP Owner share goes directly to the verified owner's wallet. On **community-type** tokens, that same 10% flows into the community treasury.
+</Tip>
+
+## Choosing at launch
+
+You pick the type when creating a **new Trend**. If you're launching a token under an existing Trend, the type is already set — you don't get to change it.
+
+- Pick **Creator** if there's a clear owner who should receive fees and control the page.
+- Pick **Community** if the culture belongs to everyone and should be collectively governed.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Launch a coin" icon="plus" href="/user-guides/how-to/launch-a-coin">
+    Walk through the full create flow.
+  </Card>
+  <Card title="Verification" icon="badge-check" href="/user-guides/verification/verification-overview">
+    How to verify a Trend and what it unlocks for each type.
+  </Card>
+  <Card title="Treasury and proposals" icon="vault" href="/user-guides/manage/treasury-and-proposals">
+    How community treasuries work and how holders vote.
+  </Card>
+  <Card title="Rewards overview" icon="trophy" href="/user-guides/rewards/overview">
+    All five reward programs and how they interact with coin types.
+  </Card>
+</CardGroup>

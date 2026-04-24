@@ -32,7 +32,7 @@
             "group": "CORE CONCEPTS",
             "pages": [
               "user-guides/coin-types",
-              "user-guides/trading/payment-methods",
+              "user-guides/trading/overview",
               "user-guides/rewards/holder-rewards",
               "user-guides/rewards/ugc-program",
               "user-guides/manage/treasury-and-proposals",
@@ -43,10 +43,8 @@
           {
             "group": "HOW-TO GUIDES",
             "pages": [
-              "user-guides/trading/overview",
               "user-guides/how-to/launch-a-coin",
               "user-guides/how-to/earn-ugc-rewards",
-              "user-guides/how-to/earn-holder-rewards",
               "user-guides/how-to/verify-a-coin"
             ]
           }
@@ -80,7 +78,11 @@
     { "source": "/user-guides/growth/referrals", "destination": "/user-guides/rewards/referrals" },
     { "source": "/user-guides/rewards/rewards-and-points", "destination": "/user-guides/rewards/points-and-leaderboard" },
     { "source": "/user-guides/rewards/leaderboard", "destination": "/user-guides/rewards/points-and-leaderboard" },
-    { "source": "/user-guides/manage/community-ip-governance", "destination": "/user-guides/manage/community-governance" }
+    { "source": "/user-guides/manage/community-ip-governance", "destination": "/user-guides/manage/community-governance" },
+    { "source": "/user-guides/trading/payment-methods", "destination": "/user-guides/trading/overview" },
+    { "source": "/user-guides/trading/fees-slippage-and-failures", "destination": "/user-guides/trading/overview" },
+    { "source": "/user-guides/trading/trade-modes-and-switches", "destination": "/user-guides/trading/overview" },
+    { "source": "/user-guides/how-to/earn-holder-rewards", "destination": "/user-guides/rewards/holder-rewards" }
   ],
   "logo": {
     "light": "/logo/light.svg",
