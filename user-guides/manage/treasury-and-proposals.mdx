@@ -1,42 +1,94 @@
 ---
 title: "Treasury and proposals"
 sidebarTitle: "Community Treasury"
-description: "The Treasury tab on a token page, Snapshot voting, and the proposal lifecycle."
+description: "How the community treasury works, how to create and vote on proposals, and how funds get spent."
 last_verified: "2026-04-23"
 ---
 
-Every token has a treasury funded by a slice of trading fees (45% of swap fees, per the fee breakdown). Who controls the treasury depends on the trend's ownership type:
+Every token has a **community treasury** — a Gnosis Safe funded by trading fees. On **community-type** tokens, the treasury also receives the IP Owner fee share. On **creator-type** tokens, that share goes to the verified owner instead.
 
-- **Creator trends** - the verified trend owner controls the treasury through the owner dashboard.
-- **Community trends** - holders govern the treasury through Snapshot proposals.
+The treasury grows as long as people trade. Holders decide how it gets spent.
 
-## Where the Treasury tab lives
+## How it works
 
-On token pages for verified trends, the **Treasury** tab shows the current balance, open proposals, vote counts, and execution status.
+<Steps>
+  <Step title="Fees accumulate">
+    A portion of every trade's fees flows into the treasury Safe. The balance is visible on the **Treasury** tab of the token page.
+  </Step>
+  <Step title="Someone creates a proposal">
+    Any holder with at least **1,000,000 tokens** can create a proposal. Proposals currently support **transfers** — sending treasury assets to a recipient address for an approved purpose.
+  </Step>
+  <Step title="Holders vote">
+    Voting runs on **Snapshot** and is embedded directly in the token page. Any holder with at least **500,000 tokens** can vote. Voting power is proportional to your token balance at the proposal's snapshot block.
+  </Step>
+  <Step title="Proposal passes or fails">
+    A proposal passes when **For > Against** and the For votes meet a **quorum of 80,000,000 tokens**. Voting stays open for **7 days**.
+  </Step>
+  <Step title="Execution">
+    Once passed, the transaction executes through the Gnosis Safe. The Safe signers finalize the on-chain action.
+  </Step>
+</Steps>
 
-![Treasury tab figure](/images/token-treasury.svg)
+<Frame>
+  <img src="/images/treasury-tab.png" alt="Treasury tab — balance, proposals, and voting" />
+</Frame>
+
+## What the Treasury tab shows
+
+On any token page, the **Treasury** tab displays:
+
+- **Treasury balance** — current \$IP and token holdings in the Safe, in USD
+- **Total fees earned** — all-time trading fees routed to the treasury
+- **Active proposals** — open votes you can participate in, with vote bars and countdown
+- **Past proposals** — completed proposals with results and execution status
 
 ## Proposal types
 
-Three proposal types are supported:
+<CardGroup cols={3}>
+  <Card title="Transfer" icon="paper-plane">
+    Send treasury assets to a recipient address. The most common proposal type — fund a marketing campaign, pay a contributor, sponsor something.
+  </Card>
+  <Card title="Burn" icon="fire">
+    Destroy treasury-held tokens. Reduces supply.
+  </Card>
+  <Card title="Swap" icon="arrow-right-arrow-left">
+    Exchange treasury assets (e.g. swap \$IP to USDC to de-risk). Coming soon.
+  </Card>
+</CardGroup>
 
-- **Transfer** - send treasury assets to a recipient address for an approved purpose.
-- **Burn** - destroy treasury-held tokens or route them to the burn mechanic configured for the trend.
-- **Swap** - exchange treasury assets (for example, swap IP to USDC to de-risk).
+## Voting thresholds
 
-## Snapshot and execution
+<CardGroup cols={2}>
+  <Card title="Participation" icon="user-check">
+    - **500,000 tokens** → Vote on a proposal
+    - **1,000,000 tokens** → Create a proposal
+  </Card>
+  <Card title="Passing" icon="check-to-slot">
+    - **7 days** → Voting period
+    - **80,000,000 tokens** → Quorum (minimum For votes)
+  </Card>
+</CardGroup>
 
-Voting runs on **Snapshot**. The ip.world Treasury tab embeds the Snapshot proposal and lets you vote inline; the Snapshot link is available for the full proposal text.
+<Tip>
+  Voting power = token balance at the snapshot block. Buy after the snapshot and your vote won't count for that proposal.
+</Tip>
 
-Once a proposal passes, execution runs through the **Gnosis Safe multisig** linked from the proposal. The Safe signers finalize the on-chain action. Always confirm the Safe address shown in the proposal matches the trend's official treasury before signing or voting.
+## Creator vs community treasuries
 
-## Pass rule
+The treasury exists for both token types, but the economics differ:
 
-A proposal passes when:
+- **Community-type**: the 10% IP Owner fee share flows into the treasury alongside the regular treasury fees. More money in the pool.
+- **Creator-type**: the 10% IP Owner share goes to the verified owner's wallet. The treasury only receives the standard treasury fee portion.
 
-- **YES > NO**, and
-- **YES ≥ 10% + NO** (baseline 10% plus one vote of YES per vote of NO).
+For the full fee breakdown, see [Coin types](/user-guides/coin-types#fee-distribution).
 
-## Next
+## What's next
 
-- [Rewards overview](/user-guides/rewards/overview)
+<CardGroup cols={2}>
+  <Card title="Coin types" icon="fire" href="/user-guides/coin-types">
+    How creator-type and community-type tokens differ.
+  </Card>
+  <Card title="Verification" icon="badge-check" href="/user-guides/verification/verification-overview">
+    Verify a Trend to unlock owner fee routes and treasury access.
+  </Card>
+</CardGroup>

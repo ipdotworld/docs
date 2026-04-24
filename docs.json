@@ -43,8 +43,10 @@
           {
             "group": "HOW-TO GUIDES",
             "pages": [
+              "user-guides/how-to/trade-coins",
               "user-guides/how-to/launch-a-coin",
               "user-guides/how-to/earn-ugc-rewards",
+              "user-guides/how-to/earn-holder-rewards",
               "user-guides/how-to/verify-a-coin"
             ]
           }
@@ -82,7 +84,7 @@
     { "source": "/user-guides/trading/payment-methods", "destination": "/user-guides/trading/overview" },
     { "source": "/user-guides/trading/fees-slippage-and-failures", "destination": "/user-guides/trading/overview" },
     { "source": "/user-guides/trading/trade-modes-and-switches", "destination": "/user-guides/trading/overview" },
-    { "source": "/user-guides/how-to/earn-holder-rewards", "destination": "/user-guides/rewards/holder-rewards" }
+    { "source": "/user-guides/how-to/trade", "destination": "/user-guides/how-to/trade-coins" }
   ],
   "logo": {
     "light": "/logo/light.svg",

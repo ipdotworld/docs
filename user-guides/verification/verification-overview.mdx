@@ -1,36 +1,66 @@
 ---
-title: "Verification overview"
+title: "Verification"
 sidebarTitle: "Verification"
-description: "Why verification exists and what it unlocks for creator and community trends."
+description: "Prove ownership of a Trend, unlock fee routes, and earn the trust badge that signals legitimacy to traders."
 last_verified: "2026-04-23"
 ---
 
-Verification moves a trend from permissionless to trusted. It proves who owns the underlying idea (for creator trends) or that the community has hit the required milestones (for community trends), so the app can route fees to the right recipient and award a trust badge.
+Verification proves who's behind a Trend. For creators, it's proof of ownership. For communities, it's proof of traction. Either way, it unlocks fee distribution, the verification badge, and governance tools.
 
-This page covers what verification is and what it unlocks.
+Until a Trend is verified, **fees are locked up** — community treasury fees, owner fees, and referral fees don't distribute. Verification is what turns them on.
+
+<Frame>
+  <img src="/images/verification-intro.png" alt="Verification wizard — intro screen showing the 6-step process" />
+</Frame>
 
 ## Two tracks
 
-ip.world has two verification tracks, one for each ownership type:
+<CardGroup cols={2}>
+  <Card title="Creator verification" icon="crown">
+    The real owner or authorized representative proves they control the IP. Can start **at any time** — no bonding requirement.
 
-- **Creator trend verification** - the real-world owner (or their authorized representative) proves ownership. The owner then claims the trend and unlocks owner economics.
-- **Community trend verification** - the trend proves it hit the market-cap and activity milestones required for community status. Verified community trends unlock governance tooling for holders.
+    Unlocks:
+    - Owner fee share (10% of \$IP side trading fees)
+    - 3% vested token allocation (linear over 3 months)
+    - Ability to endorse tokens as **Official** or **Liked**
+    - Owner dashboard
+    - Community treasury for holders
+  </Card>
+  <Card title="Community verification" icon="users">
+    A community lead or member proves the token has real traction. The token must be **bonded** (graduated) before verification can start.
 
-## What verification unlocks
+    Unlocks:
+    - Owner fees routed to the community treasury
+    - The verifying token is automatically marked **Official**
+    - Community treasury + governance (Snapshot + Safe)
+  </Card>
+</CardGroup>
 
-For **both** tracks, verification unlocks:
+## What happens after approval
 
-- Fee routing to the owner or community treasury.
-- The verification badge on the trend and all tokens under it.
+Once approved:
 
-For **creator trends**, verification additionally unlocks:
+- A **Story Protocol IPA** and PIL are registered on-chain, with ownership assigned to the creator payout address (creator tokens) or the community treasury (community tokens).
+- The Trend gets the **verification badge** — visible on the Trend and all tokens under it.
+- **Locked fees are released** and start distributing immediately.
+- **Creator tokens**: the owner can now endorse specific tokens as **Official** (full endorsement) or **Liked** (awareness without full endorsement) from the token management menu.
+- **Community tokens**: the token that initiated verification is automatically marked **Official**.
+- **Treasury tab unlocks** — holders can create and vote on proposals.
 
-- **Vested allocation** - 3% of each token's supply, vested linearly over 3 months to the verified owner's wallet.
-- **Owner fee share** - the owner's cut of trading fees on every token under the trend.
-- **Endorsements** - the owner can endorse specific tokens under the trend as canonical.
-- **Owner dashboard** - claim, harvest, and treasury controls.
+<Warning>
+  Verification applies to the **Trend**, not individual tokens. Once a Trend is verified, all tokens under it are verified. You don't verify tokens one at a time.
+</Warning>
 
-For **community trends**, verification additionally unlocks:
+## What's next
 
-- **Community treasury** - holders govern how the treasury is spent.
-- **Governance** - proposals on Snapshot, execution through a Gnosis Safe multisig.
+<CardGroup cols={2}>
+  <Card title="Verify a coin" icon="book-open" href="/user-guides/how-to/verify-a-coin">
+    Step-by-step walkthrough of the verification form.
+  </Card>
+  <Card title="Coin types" icon="fire" href="/user-guides/coin-types">
+    How creator-type and community-type tokens differ — including fee splits.
+  </Card>
+  <Card title="Treasury and proposals" icon="vault" href="/user-guides/manage/treasury-and-proposals">
+    How the community treasury works after verification unlocks it.
+  </Card>
+</CardGroup>

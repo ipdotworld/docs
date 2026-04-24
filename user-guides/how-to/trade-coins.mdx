@@ -1,0 +1,76 @@
+---
+title: "Trade coins"
+sidebarTitle: "Trade Coins"
+description: "Buy and sell tokens on ip.world — step-by-step."
+last_verified: "2026-04-23"
+---
+
+## Buy a token
+
+<Steps>
+  <Step title="Open the token page">
+    Search or browse the feed, then tap the token you want to trade.
+  </Step>
+  <Step title="Open the trade panel">
+    On the right side of the token page, make sure **Buy** is selected.
+  </Step>
+  <Step title="Pick your pay asset">
+    Choose **\$IP**, **\$USDC**, or **\$SOL** from the asset selector. If you pay with SOL or Solana USDC, the app bridges it to Story via Relay before the swap — you'll see the estimate before you sign.
+  </Step>
+  <Step title="Enter the amount">
+    Type how much you want to spend. The panel shows the estimated tokens you'll receive and the fee.
+  </Step>
+  <Step title="Confirm">
+    Tap **Buy** and approve the wallet prompt. Your new balance shows up once the transaction lands.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/trading-panel-buy.png" alt="Trade panel — buy mode with pay asset selector" />
+</Frame>
+
+## Sell a token
+
+<Steps>
+  <Step title="Switch to Sell">
+    Toggle to **Sell** in the trade panel on the token page.
+  </Step>
+  <Step title="Enter the amount">
+    Type how many tokens to sell, or use the percentage shortcuts (25%, 50%, 75%, 100%).
+  </Step>
+  <Step title="Pick your receive asset">
+    Choose which asset you want to receive. If you sell into SOL, the SOL lands in your **Solana embedded wallet**.
+  </Step>
+  <Step title="Confirm">
+    Tap **Sell** and approve the wallet prompt.
+  </Step>
+</Steps>
+
+## Set slippage
+
+Before confirming a trade, tap the **slippage** setting in the trade panel. A tight tolerance on a volatile token will cause the transaction to revert if the price moves during the block. Loosen it for large trades or fast-moving markets.
+
+<Frame>
+  <img src="/images/trading-slippage.png" alt="Slippage setting in the trade panel" />
+</Frame>
+
+## If something goes wrong
+
+<AccordionGroup>
+  <Accordion title="User rejected">
+    You cancelled the wallet prompt. Just try again.
+  </Accordion>
+  <Accordion title="Insufficient funds">
+    You need more **\$IP** for gas, or more of the pay asset you selected. Fund your wallet from the wallet menu or the [Quickstart](/user-guides/getting-started#fund-your-wallet).
+  </Accordion>
+  <Accordion title="Anti-snipe limit exceeded">
+    Your trade would push your wallet over the **2% cap** inside the 5-minute anti-snipe window on newly launched tokens. Wait for the window to pass or reduce your trade size.
+  </Accordion>
+  <Accordion title="Relay did not complete">
+    A SOL or Solana USDC route failed mid-bridge. Your funds stay on the source chain. Wait for the bridge to settle or retry — don't sign a replacement until the original has resolved.
+  </Accordion>
+</AccordionGroup>
+
+## Learn more
+
+For a deeper look at pay assets, fees, and how cross-chain routing works, see [Trading](/user-guides/trading/overview).
